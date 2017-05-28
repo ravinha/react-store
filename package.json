@@ -1,0 +1,29 @@
+{
+  "name": "warsztatyReact",
+  "bin": {},
+  "version": "3.0.0",
+  "description": "",
+  "main": "bundle.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "~6.18.2",
+    "babel-loader": "~6.2.8",
+    "babel-preset-latest": "~6.16.0",
+    "babel-preset-react": "~6.16.0",
+    "node-sass": "^3.13.0",
+    "react": "~15.4.1",
+    "react-dom": "~15.4.1",
+    "react-hot-loader": "~3.0.0-beta.6",
+    "webpack": "~1.13.3",
+    "webpack-dev-server": "~1.16.2"
+  },
+  "scripts": {
+    "buildCss": "./node_modules/node-sass/bin/node-sass ./src/scss/main.scss ./public/main.css",
+    "buildJs": "./node_modules/webpack/bin/webpack.js -p",
+    "watchCss": "./node_modules/node-sass/bin/node-sass --watch --recursive ./src/scss --output ./public",
+    "watchJs": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --progress --colors --content-base=./public "
+  },
+  "keywords": [],
+  "author": "pwPBX",
+  "license": "MIT"
+}
