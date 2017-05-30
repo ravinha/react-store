@@ -1,3 +1,5 @@
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 function getDevTool() {
 	if (process.env.NODE_ENV !== 'production') {
 		return 'source-map'; //enables source map
@@ -23,8 +25,22 @@ module.exports = {
 				query: {
 					presets: ['react', 'es2015']
 				}
-			}
+			},
+            {
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract('style', 'css')
+            },
+			{
+				test: /\.(png|jpg)$/,
+				loader: 'url?limit=8192'
+			},
+            {
+                test: /\.(eot|svg|ttf|woff(2)?)(\?v=\d+\.\d+\.\d+)?/,
+                loader: 'url'
+            }
 		]
 	},
-	plugins: []
+	plugins: [
+        new ExtractTextPlugin('bundle.css')
+    ]
 };

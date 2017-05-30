@@ -1,0 +1,11 @@
+.FiltersBlockHeader {
+  align-items: center;
+  display: flex;
+
+  &__title {
+    flex: 1;
+  }
+  &__close {
+    float: right;
+  }
+}

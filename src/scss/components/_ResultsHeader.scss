@@ -1,0 +1,6 @@
+.ResultsHeader {
+  display: flex;
+  & .Label {
+    flex: 1;
+  }
+}

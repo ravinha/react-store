@@ -1,0 +1,51 @@
+.ColorRow {
+  display: flex;
+}
+
+.ColorBlock {
+  flex: 1;
+  width: 10px;
+  height: 10px;
+}
+
+.Upper {
+  &__1 {
+    @extend .ColorBlock;
+    background: purple;
+  }
+  &__2 {
+    @extend .ColorBlock;
+    background: blue;
+  }
+  &__3 {
+    @extend .ColorBlock;
+    background: #486480;
+  }
+  &__4 {
+    @extend .ColorBlock;
+    background: green;
+  }
+  &__5 {
+    @extend .ColorBlock;
+    background: darkred;
+  }
+}
+
+.Lower {
+  &__1 {
+    @extend .ColorBlock;
+    background: orangered;
+  }
+  &__2 {
+    @extend .ColorBlock;
+    background: orange;
+  }
+  &__3 {
+    @extend .ColorBlock;
+    background: yellow;
+  }
+  &__4 {
+    @extend .ColorBlock;
+    background: grey;
+  }
+}

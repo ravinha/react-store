@@ -1,0 +1,28 @@
+.LayoutSelector {
+  background: white;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+
+  &__row {
+    flex: 1;
+    display: flex;
+    padding: 1px;
+  }
+  &__rectangle {
+    flex: 1;
+    margin: 1px;
+  }
+  &__rectangle__checked {
+    flex: 1;
+    margin: 1px;
+    background: green;
+  }
+  &__rectangle__unchecked {
+    flex: 1;
+    margin: 1px;
+    background: grey;
+  }
+
+}
