@@ -511,3 +511,16 @@ template {
   display: flex; }
   .ResultsHeader .Label {
     flex: 1; }
+
+.ResultsFilterBar {
+  display: flex;
+  align-items: center; }
+  .ResultsFilterBar .Label {
+    flex: 1; }
+  .ResultsFilterBar .FilterBox {
+    border: 1px solid;
+    flex: 1;
+    display: flex;
+    align-items: center; }
+    .ResultsFilterBar .FilterBox .Label {
+      flex: 1; }

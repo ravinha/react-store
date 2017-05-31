@@ -1,0 +1,11 @@
+.RatingLayout {
+  display: flex;
+  align-items: center;
+  & .RatingStar {
+    flex: 1;
+  }
+  & .Heart {
+    flex: 1;
+    float: right;
+  }
+}

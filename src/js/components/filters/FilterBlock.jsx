@@ -15,7 +15,9 @@ export default class FilterBlock extends React.Component {
                         <FilterRow
                             key={i}
                             item={filter.item}
-                            count={filter.count}/>
+                            count={filter.count}
+                            chosen={filter.chosen}
+                        />
                     )
                 }
             </div>

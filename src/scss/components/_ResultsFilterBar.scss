@@ -1,0 +1,17 @@
+.ResultsFilterBar {
+  display: flex;
+  align-items: center;
+  & .Label {
+    flex: 1;
+  }
+  & .FilterBox {
+    border: 1px solid;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    & .Label {
+      flex: 1;
+    }
+  }
+
+}

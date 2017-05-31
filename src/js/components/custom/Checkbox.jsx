@@ -7,7 +7,7 @@ export default class Checkbox extends React.Component {
 		this.onChecked = this.onChecked.bind(this);
 		this.onUnchecked = this.onUnchecked.bind(this);
 		this.state = {
-			checked : false
+			checked : this.props.isChecked
 		}
 	}
 

@@ -8,7 +8,8 @@ export default class RootView extends React.Component {
     constructor(props){
         super(props);
 		this.state = {
-        	model: DataUtil.getModel()
+        	model: DataUtil.getModel(),
+			filters: DataUtil.getFilters()
 		}
     }
 
@@ -18,6 +19,7 @@ export default class RootView extends React.Component {
 				<FiltersView/>
 				<ResultsView
 					books={this.state.model.books}
+					filters={this.state.filters}
 				/>
 			</div>
 		);
