@@ -1,0 +1,10 @@
+.ResultsFooter {
+  display: flex;
+  align-items: center;
+  & .img {
+    flex: 1;
+  }
+  & .PageBlock {
+    flex: 1;
+  }
+}

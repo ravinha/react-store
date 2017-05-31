@@ -8,8 +8,7 @@
 /* Document
    ========================================================================== */
 html {
-  font-family: sans-serif;
-  /* 1 */
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
   line-height: 1.15;
   /* 2 */
   -ms-text-size-adjust: 100%;
@@ -403,32 +402,32 @@ template {
   display: none; }
 
 .RootView {
-  background: white; }
+  background: white;
+  display: flex; }
 
 .FiltersView {
-  float: left;
-  width: 25%; }
+  flex: 0 0 250px;
+  margin: 1%; }
 
 .ResultsView {
-  float: right;
-  width: 75%; }
+  flex: 1; }
 
 .FiltersBlockHeader {
   align-items: center;
-  display: flex; }
-  .FiltersBlockHeader__title {
+  display: flex;
+  padding-bottom: 10px; }
+  .FiltersBlockHeader .Label {
     flex: 1; }
   .FiltersBlockHeader__close {
     float: right; }
 
 .FilterRow {
   display: flex; }
-
-.ResultsLabel {
-  flex: 4; }
+  .FilterRow .Label__dark {
+    flex: 4; }
 
 .CheckBox {
-  flex: 1; }
+  flex: 0 0 20px; }
 
 .FilterOrientationRow {
   display: flex;
@@ -456,7 +455,10 @@ template {
 .ColorBlock, .Upper__1, .Upper__2, .Upper__3, .Upper__4, .Upper__5, .Lower__1, .Lower__2, .Lower__3, .Lower__4 {
   flex: 1;
   width: 10px;
-  height: 10px; }
+  height: 50px; }
+
+.BlockChecked {
+  margin: 10%; }
 
 .Upper__1 {
   background: purple; }
@@ -508,13 +510,15 @@ template {
     background: grey; }
 
 .ResultsHeader {
-  display: flex; }
+  display: flex;
+  border-left: 0.5px solid #9b9b9b; }
   .ResultsHeader .Label {
     flex: 1; }
 
 .ResultsFilterBar {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  border-left: 0.5px solid #9b9b9b; }
   .ResultsFilterBar .Label {
     flex: 1; }
   .ResultsFilterBar .FilterBox {
@@ -524,3 +528,40 @@ template {
     align-items: center; }
     .ResultsFilterBar .FilterBox .Label {
       flex: 1; }
+
+.ResultsFooter {
+  display: flex;
+  align-items: center; }
+  .ResultsFooter .img {
+    flex: 1; }
+  .ResultsFooter .PageBlock {
+    flex: 1; }
+
+.Label {
+  color: #9b9b9b;
+  font-size: 14px; }
+  .Label__dark {
+    color: #383838; }
+  .Label__bold {
+    font-size: 18px; }
+
+.ResultsList {
+  border-left: 0.5px solid #9b9b9b; }
+  .ResultsList__row {
+    flex: 1;
+    display: flex;
+    padding: 1px; }
+
+.FilterBlock {
+  margin-bottom: 30px; }
+
+.ResultsItem {
+  flex: 1;
+  margin: 2%; }
+  .ResultsItem .BookImg {
+    width: 100%; }
+
+.RatingLayout {
+  align-items: center; }
+  .RatingLayout .Heart {
+    float: right; }

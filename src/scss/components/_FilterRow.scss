@@ -1,13 +1,6 @@
 .FilterRow {
   display: flex;
-}
-
-.ResultsLabel {
-  flex: 4;
-  //width: 75%;
-}
-
-.ResultsCount {
-  //flex: 1;
-  //width: 75%;
+  .Label__dark {
+    flex: 4;
+  }
 }

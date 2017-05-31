@@ -14,7 +14,7 @@ export default class ResultsList extends React.Component {
                     [...Array(rows > maxRowsPerPage ? maxRowsPerPage : rows).keys()].map((row, i) =>
                         <div
                             key={i}
-                            className="LayoutSelector__row">
+                            className="ResultsList__row">
                             {
                                 [...Array(this.props.columns).keys()].map((column, j) =>
                                     <ResultsItem
@@ -27,7 +27,7 @@ export default class ResultsList extends React.Component {
                         </div>
                     )
                 }
-                <div className="LayoutSelector__row">
+                <div className="ResultsList__row">
                     {
                         [...Array(rows > maxRowsPerPage? 0 : lastRowBooksCount).keys()].map((column, j) =>
                             <ResultsItem

@@ -1,8 +1,9 @@
 .FiltersBlockHeader {
   align-items: center;
   display: flex;
+  padding-bottom: 10px;
 
-  &__title {
+  & .Label {
     flex: 1;
   }
   &__close {

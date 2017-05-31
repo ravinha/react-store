@@ -1,16 +1,20 @@
 import React from "react";
+import ColorFilter from "./ColorFilter.jsx";
 
 export default class ColorRow extends React.Component {
 
     render() {
-        var colors = [1,2,3,4,5];
+        //TODO ARRAY OF N numbers as Util
+        var colors = [1, 2, 3, 4, 5];
         return (
             <div className="ColorRow">
                 {
-                    colors.map((color,i)=>
-                        <div
+                    colors.map((color, i) =>
+                        <ColorFilter
                             key={i}
-                            className={`${this.props.type}__${color}`}/>
+                            color={color}
+                            type={this.props.type}
+                        />
                     )
                 }
             </div>

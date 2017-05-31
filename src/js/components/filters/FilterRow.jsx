@@ -1,5 +1,6 @@
 import React from "react";
 import Checkbox from "../custom/Checkbox.jsx";
+import Label from "../custom/Label.jsx";
 
 export default class FilterRow extends React.Component {
 
@@ -10,8 +11,10 @@ export default class FilterRow extends React.Component {
                 <Checkbox
                     isChecked={this.props.chosen}
                 />
-                <strong className="ResultsLabel">{this.props.item}</strong>
-                <strong className="ResultsCount">{this.props.count}</strong>
+                <Label
+                    color="dark"
+                    content={this.props.item}/>
+                <Label content={this.props.count}/>
             </div>
         );
     }

@@ -12,6 +12,7 @@ export default class FiltersView extends React.Component {
 		return (
 			<div className="FiltersView">
 				<Label
+					color="dark"
 					content="Narrow results"
 				/>
 				<FilterOrientationBlock/>

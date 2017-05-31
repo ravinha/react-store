@@ -6,7 +6,7 @@ export default class FilterOrientationBlock extends React.Component {
 
     render() {
         return (
-            <div className="FilterOrientationBlock">
+            <div className="FilterBlock">
                 <FilterBlockHeader title="Orientation"/>
                 <FilterOrientationRow/>
             </div>

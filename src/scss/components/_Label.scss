@@ -1,0 +1,10 @@
+.Label {
+  color: rgb(155, 155, 155);
+  font-size: 14px;
+  &__dark {
+    color: rgb(56, 56, 56);
+  }
+  &__bold {
+    font-size: 18px;
+  }
+}

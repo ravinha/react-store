@@ -1,6 +1,7 @@
 .ResultsFilterBar {
   display: flex;
   align-items: center;
+  border-left: 0.5px solid rgb(155,155,155);
   & .Label {
     flex: 1;
   }

@@ -8,7 +8,9 @@ export default class ResultsFilterBar extends React.Component {
     render() {
         return (
             <div className="ResultsFilterBar">
-                <Label content="Showing Filters:"/>
+                <Label
+                    color="dark"
+                    content="Showing Filters:"/>
                 {
                     this.props.filtersChosen.map((filter, i) =>
                         <FilterBox

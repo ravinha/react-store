@@ -8,7 +8,9 @@ export default class ResultsItem extends React.Component {
 	render() {
 		return (
 			<div className="ResultsItem">
-				<img src={require(`../../../resources/icons/${this.props.book.icon}`)}/>
+				<img
+					className="BookImg"
+					src={require(`../../../resources/icons/${this.props.book.icon}`)}/>
 				<RatingLayout
 					rating={this.props.book.rating}
 					isFavorite={this.props.book.isFavorite}
