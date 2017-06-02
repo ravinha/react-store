@@ -1,10 +1,10 @@
 .ResultsFooter {
   display: flex;
+  width: 100px;
   align-items: center;
+  text-align: center;
+  margin: auto;
   & .img {
-    flex: 1;
-  }
-  & .PageBlock {
     flex: 1;
   }
 }

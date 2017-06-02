@@ -15,8 +15,15 @@ export default class ResultsItem extends React.Component {
 					rating={this.props.book.rating}
 					isFavorite={this.props.book.isFavorite}
 				/>
-				<Label content={this.props.book.title}/>
-				<Label content={this.props.book.size}/>
+				<Label
+					bold={true}
+					color="dark"
+					content={this.props.book.title}/>
+				<Label
+					bold={true}
+					color="dark"
+					className="small"
+					content={this.props.book.size}/>
 			</div>
 		);
 	}

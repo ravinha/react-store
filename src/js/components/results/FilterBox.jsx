@@ -8,7 +8,7 @@ export default class FilterBox extends React.Component {
         return (
             <div className="FilterBox">
                 <Label content={this.props.name}/>
-                <img src={require('../../../resources/icons/close_mark.png')} className="FilterBox__close"/>
+                <img src={require('../../../resources/icons/CloseGrey.png')} className="FilterBox__close"/>
             </div>
         );
     }

@@ -10,6 +10,8 @@ export default class ResultsFilterBar extends React.Component {
             <div className="ResultsFilterBar">
                 <Label
                     color="dark"
+                    bold={true}
+                    className="margin"
                     content="Showing Filters:"/>
                 {
                     this.props.filtersChosen.map((filter, i) =>

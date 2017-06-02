@@ -4,25 +4,23 @@
   height: 20px;
   display: flex;
   flex-direction: column;
+  margin-top: 2%;
+  margin-right: 1%;
 
   &__row {
     flex: 1;
     display: flex;
-    padding: 1px;
   }
+
   &__rectangle {
-    flex: 1;
-    margin: 1px;
-  }
-  &__rectangle__checked {
-    flex: 1;
-    margin: 1px;
-    background: green;
-  }
-  &__rectangle__unchecked {
     flex: 1;
     margin: 1px;
     background: grey;
   }
+}
 
+.EnteredLayout {
+  & .LayoutSelector__rectangle {
+    background: rgb(86, 196, 122);
+  }
 }

@@ -14,6 +14,7 @@ export default class ResultsFooter extends React.Component {
                         <PageBlock
                             key={i}
                             page={page}
+                            selected={page.number === this.props.page}
                             selectPage={this.props.selectPage}
                         />
                     )

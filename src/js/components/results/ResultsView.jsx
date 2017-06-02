@@ -8,7 +8,9 @@ export default class ResultsView extends React.Component {
 
     constructor(props) {
         super(props);
-        this.selectPage = this.selectPage.bind(this)
+        this.selectPage = this.selectPage.bind(this);
+        this.selectItemsPerPage = this.selectItemsPerPage.bind(this);
+        this.selectColumns = this.selectColumns.bind(this);
         this.state = {
             columns: 4,
             itemsPerPage: 20,
@@ -18,7 +20,25 @@ export default class ResultsView extends React.Component {
 
     selectPage(pageNumber) {
         this.setState({
-            pageNumber: pageNumber
+            pageNumber
+        })
+    }
+
+    selectItemsPerPage(itemsPerPage) {
+        if(itemsPerPage === "All"){
+            this.setState({
+                itemsPerPage: this.props.books.length
+            })
+        } else {
+            this.setState({
+                itemsPerPage
+            })
+        }
+    }
+
+    selectColumns(columns) {
+        this.setState({
+            columns
         })
     }
 
@@ -29,11 +49,14 @@ export default class ResultsView extends React.Component {
             this.props.filters.style
         ).filter(filter => filter.chosen);
 
-        var maxPages = Math.floor(this.props.books.length / this.state.itemsPerPage);
+        var maxPages = Math.ceil(this.props.books.length / this.state.itemsPerPage);
         return (
             <div className="ResultsView">
                 <ResultsHeader
                     count={this.props.books.length}
+                    columns={this.state.columns}
+                    selectItemsPerPage={this.selectItemsPerPage}
+                    selectColumns={this.selectColumns}
                 />
                 <ResultsFilterBar
                     filtersChosen={filtersChosen}

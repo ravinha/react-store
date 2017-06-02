@@ -1,0 +1,10 @@
+.PageBlock {
+  flex: 1;
+}
+
+.EnteredBlock {
+  background: rgb(86, 196, 122);
+  & .Label {
+    color: white;
+  }
+}

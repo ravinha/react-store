@@ -9,6 +9,7 @@ export default class FilterBlockHeader extends React.Component {
             <div className="FiltersBlockHeader">
                 <Label
                     bold={true}
+                    className="big"
                     content={this.props.title}/>
                 <img src={require('../../../resources/icons/close_mark.png')}
                      className="FiltersBlockHeader__close"/>

@@ -13,6 +13,8 @@ export default class FiltersView extends React.Component {
 			<div className="FiltersView">
 				<Label
 					color="dark"
+					bold={true}
+					className="big"
 					content="Narrow results"
 				/>
 				<FilterOrientationBlock/>
