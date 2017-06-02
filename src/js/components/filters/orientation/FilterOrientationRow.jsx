@@ -6,14 +6,17 @@ export default class FilterOrientationRow extends React.Component {
     render() {
         return (
             <div className="FilterOrientationRow">
-                <FilterOrientationRectangle
-                    className="HorizontalRectangle"
-                    content="horizontal"
-                />
-                <FilterOrientationRectangle
-                    className="VerticalRectangle"
-                    content="vertical"
-                />
+                {
+                    this.props.filters.map((filter, i) =>
+                        <FilterOrientationRectangle
+                            key={i}
+                            checked={filter.chosen}
+                            className={`${filter.item}Rectangle`}
+                            content={`${filter.item}`}
+                            onStateChanged={() => this.props.activateFilter(`${filter.item}`)}
+                        />
+                    )
+                }
             </div>
         );
     }

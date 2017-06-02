@@ -8,8 +8,7 @@ export default class FilterColorBlock extends React.Component {
         return (
             <div className="FilterBlock">
                 <FilterBlockHeader title="Color" subtitle="Choose color(s)"/>
-                <ColorRow type="Upper"/>
-                <ColorRow type="Lower"/>
+                <ColorRow/>
             </div>
         );
     }

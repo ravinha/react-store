@@ -8,7 +8,10 @@ export default class FilterOrientationBlock extends React.Component {
         return (
             <div className="FilterBlock">
                 <FilterBlockHeader title="Orientation"/>
-                <FilterOrientationRow/>
+                <FilterOrientationRow
+                    filters={this.props.filters}
+                    activateFilter={this.props.activateFilter}
+                />
             </div>
         );
     }

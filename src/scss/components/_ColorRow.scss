@@ -1,55 +1,67 @@
 .ColorRow {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .ColorBlock {
-  flex: 1;
-  width: 10px;
+  width: 50px;
   height: 50px;
+  position: relative;
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
 }
 
 .BlockChecked {
-  margin: 10%;
+  margin: auto;
+  width: 43px;
+  height: 43px;
 }
 
-.Upper {
+.Color {
   &__1 {
     @extend .ColorBlock;
-    background: purple;
+    background: rgb(106, 113, 230);
   }
   &__2 {
     @extend .ColorBlock;
-    background: blue;
+    background: rgb(1, 146, 255);
   }
   &__3 {
     @extend .ColorBlock;
-    background: #486480;
+    background: rgb(97, 210, 254);
   }
   &__4 {
     @extend .ColorBlock;
-    background: green;
+    background: rgb(72, 220, 108);
   }
   &__5 {
     @extend .ColorBlock;
-    background: darkred;
+    background: rgb(254, 74, 101);
   }
-}
-
-.Lower {
-  &__1 {
+  &__6 {
     @extend .ColorBlock;
-    background: orangered;
+    background: rgb(255, 85, 52);
   }
-  &__2 {
+  &__7 {
     @extend .ColorBlock;
-    background: orange;
+    background: rgb(255, 165, 0);
   }
-  &__3 {
+  &__8 {
     @extend .ColorBlock;
-    background: yellow;
+    background: rgb(254, 210, 1);
   }
-  &__4 {
+  &__9 {
     @extend .ColorBlock;
-    background: grey;
+    background: rgb(159, 160, 164);
+  }
+  &__10 {
+    @extend .ColorBlock;
+    background: white;
   }
 }

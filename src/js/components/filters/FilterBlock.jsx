@@ -17,6 +17,7 @@ export default class FilterBlock extends React.Component {
                             item={filter.item}
                             count={filter.count}
                             chosen={filter.chosen}
+                            onStateChanged={() => this.props.activateFilter(filter)}
                         />
                     )
                 }

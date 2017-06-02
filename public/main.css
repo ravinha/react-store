@@ -433,59 +433,92 @@ template {
   display: flex;
   align-items: center; }
 
-.HorizontalRectangle {
-  width: 20px;
-  height: 10px;
-  border: 1px solid green;
-  margin: auto; }
+.Rectangle, .horizontalRectangle .RectangleDiv, .verticalRectangle .RectangleDiv {
+  margin: auto;
+  border-radius: 2px;
+  background: #dadada;
+  position: relative; }
+  .Rectangle img, .horizontalRectangle .RectangleDiv img, .verticalRectangle .RectangleDiv img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
 
-.VerticalRectangle {
-  width: 10px;
-  height: 20px;
-  border: 1px solid green;
-  margin: auto; }
+.OrientationChecked {
+  background: #56c47a !important; }
+
+.horizontalRectangle .RectangleDiv {
+  width: 45px;
+  height: 30px;
+  top: -10px; }
+
+.verticalRectangle .RectangleDiv {
+  width: 30px;
+  height: 45px; }
 
 .FilterOrientationRectangle {
   flex: 1;
   text-align: center; }
 
-.ColorRow {
-  display: flex; }
+.horizontalRectangle {
+  position: relative; }
+  .horizontalRectangle .Label {
+    position: absolute;
+    left: 0;
+    right: 0; }
 
-.ColorBlock, .Upper__1, .Upper__2, .Upper__3, .Upper__4, .Upper__5, .Lower__1, .Lower__2, .Lower__3, .Lower__4 {
-  flex: 1;
-  width: 10px;
-  height: 50px; }
+.ColorRow {
+  display: flex;
+  flex-wrap: wrap; }
+
+.ColorBlock, .Color__1, .Color__2, .Color__3, .Color__4, .Color__5, .Color__6, .Color__7, .Color__8, .Color__9, .Color__10 {
+  width: 50px;
+  height: 50px;
+  position: relative; }
+  .ColorBlock img, .Color__1 img, .Color__2 img, .Color__3 img, .Color__4 img, .Color__5 img, .Color__6 img, .Color__7 img, .Color__8 img, .Color__9 img, .Color__10 img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
 
 .BlockChecked {
-  margin: 10%; }
+  margin: auto;
+  width: 43px;
+  height: 43px; }
 
-.Upper__1 {
-  background: purple; }
+.Color__1 {
+  background: #6a71e6; }
 
-.Upper__2 {
-  background: blue; }
+.Color__2 {
+  background: #0192ff; }
 
-.Upper__3 {
-  background: #486480; }
+.Color__3 {
+  background: #61d2fe; }
 
-.Upper__4 {
-  background: green; }
+.Color__4 {
+  background: #48dc6c; }
 
-.Upper__5 {
-  background: darkred; }
+.Color__5 {
+  background: #fe4a65; }
 
-.Lower__1 {
-  background: orangered; }
+.Color__6 {
+  background: #ff5534; }
 
-.Lower__2 {
+.Color__7 {
   background: orange; }
 
-.Lower__3 {
-  background: yellow; }
+.Color__8 {
+  background: #fed201; }
 
-.Lower__4 {
-  background: grey; }
+.Color__9 {
+  background: #9fa0a4; }
+
+.Color__10 {
+  background: white; }
 
 .LayoutSelector {
   background: white;
@@ -548,7 +581,9 @@ template {
   text-align: center;
   margin: auto; }
   .ResultsFooter .img {
-    flex: 1; }
+    flex: 1;
+    padding-left: 5px;
+    padding-right: 5px; }
 
 .Label {
   color: #9b9b9b; }
@@ -627,7 +662,8 @@ template {
   padding-right: 3px; }
 
 .PageBlock {
-  flex: 1; }
+  padding-left: 5px;
+  padding-right: 5px; }
 
 .EnteredBlock {
   background: #56c47a; }

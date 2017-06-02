@@ -2,40 +2,33 @@ import React from "react";
 
 export default class Checkbox extends React.Component {
 
-	constructor(props){
-		super(props);
-		this.onChecked = this.onChecked.bind(this);
-		this.onUnchecked = this.onUnchecked.bind(this);
-		this.state = {
-			checked : this.props.isChecked
-		}
-	}
-
-	onChecked(){
-		this.setState({
-			checked: true
-		});
-        //TODO UNDEFINED
-        this.props.onChecked()
-	}
-
-    onUnchecked(){
-        this.setState({
-            checked: false
-        });
-        //TODO UNDEFINED
-		this.props.onUnchecked()
+    constructor(props) {
+        super(props);
+        this.onStateChanged = this.onStateChanged.bind(this);
+        this.state = {
+            checked: this.props.checked
+        }
     }
 
-	render() {
-		return (
-			<div className="CheckBox">
-                { this.state.checked ?
-					<img src={require('../../../resources/icons/checkbox_checked.png')} onClick={this.onUnchecked}/>
-					:
-					<img src={require('../../../resources/icons/checkbox_unchecked.png')} onClick={this.onChecked}/>
-                }
-			</div>
-		);
-	}
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            checked: nextProps.checked
+        });
+    }
+
+    onStateChanged() {
+        this.setState({
+            checked: !this.state.checked
+        });
+        this.props.onStateChanged()
+    }
+
+    render() {
+        var iconName = this.state.checked ? "checkbox_checked.png" : "checkbox_unchecked.png";
+        return (
+            <div className="CheckBox">
+                <img src={require(`../../../resources/icons/${iconName}`)} onClick={this.onStateChanged}/>
+            </div>
+        );
+    }
 }

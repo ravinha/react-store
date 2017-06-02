@@ -4,7 +4,7 @@ export default class ColorFilter extends React.Component {
 
     constructor(props) {
         super(props);
-        this.check = this.check.bind(this)
+        this.check = this.check.bind(this);
         this.state = {
             checked: false
         }
@@ -21,8 +21,12 @@ export default class ColorFilter extends React.Component {
         return (
             <div
                 onClick={this.check}
-                className={`${this.props.type}__${this.props.color}${checkStyle}`}>
-                {  this.state.checked && <img src={require(`../../../../resources/icons/Check.png`)}/>  }
+                className={`Color__${this.props.color}${checkStyle}`}>
+
+                {  this.state.checked && !this.props.last &&
+                <img src={require(`../../../../resources/icons/Check.png`)}/>  }
+
+                {  this.props.last && <img src={require(`../../../../resources/icons/Add.png`)}/>  }
             </div>
         );
     }

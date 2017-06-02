@@ -3,21 +3,48 @@
   align-items: center;
 }
 
-.HorizontalRectangle {
-  width: 20px;
-  height: 10px;
-  border: 1px solid green;
+.Rectangle {
   margin: auto;
+  border-radius: 2px;
+  background: rgb(218, 218, 218);
+  position: relative;
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
 }
 
-.VerticalRectangle {
-  width: 10px;
-  height: 20px;
-  border: 1px solid green;
-  margin: auto;
+.OrientationChecked {
+  background: rgb(86, 196, 122) !important;
+}
+
+.horizontalRectangle .RectangleDiv {
+  @extend .Rectangle;
+  width: 45px;
+  height: 30px;
+  top: -10px;
+}
+
+.verticalRectangle .RectangleDiv {
+  @extend .Rectangle;
+  width: 30px;
+  height: 45px;
 }
 
 .FilterOrientationRectangle {
   flex: 1;
   text-align: center;
+}
+
+.horizontalRectangle {
+  position: relative;
+  & .Label {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
 }

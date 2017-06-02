@@ -9,7 +9,8 @@ export default class FilterRow extends React.Component {
         return (
             <div className="FilterRow">
                 <Checkbox
-                    isChecked={this.props.chosen}
+                    checked={this.props.chosen}
+                    onStateChanged={this.props.onStateChanged}
                 />
                 <Label
                     color="dark"
