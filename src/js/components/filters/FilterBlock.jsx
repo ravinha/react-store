@@ -9,12 +9,13 @@ export default class FilterBlock extends React.Component {
 
         return (
             <div className="FilterBlock">
-                <FilterBlockHeader title={this.props.title} subTitle={""}/>
+                <FilterBlockHeader title={this.props.title} subTitle={this.props.subTitle ? this.props.subTitle : ""}/>
                 {
                     this.props.filters.map((filter, i) =>
                         <FilterRow
                             key={i}
                             item={filter.item}
+                            type={this.props.type}
                             count={filter.count}
                             chosen={filter.chosen}
                             onStateChanged={() => this.props.activateFilter(filter)}

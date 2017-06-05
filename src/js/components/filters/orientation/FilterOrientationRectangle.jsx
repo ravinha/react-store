@@ -33,7 +33,9 @@ export default class FilterOrientationRectangle extends React.Component {
                 <div className={`RectangleDiv${checkStyle}`}>
                     {  this.state.checked && <img src={require(`../../../../resources/icons/Check.png`)}/>  }
                 </div>
-                <Label content={this.props.content}/>
+                <Label
+                    color="dark"
+                    content={this.props.content}/>
             </div>
         );
     }

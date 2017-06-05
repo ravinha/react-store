@@ -412,19 +412,24 @@ template {
 .ResultsView {
   flex: 1; }
 
-.FiltersBlockHeader {
+.FiltersBlockHeader .TitleHeader {
   align-items: center;
-  display: flex;
-  padding-bottom: 10px; }
-  .FiltersBlockHeader .Label {
+  display: flex; }
+  .FiltersBlockHeader .TitleHeader .Label {
     flex: 1; }
-  .FiltersBlockHeader__close {
+  .FiltersBlockHeader .TitleHeader__close {
     float: right; }
+
+.FiltersBlockHeader .Label {
+  padding-top: 3px;
+  padding-bottom: 3px; }
 
 .FilterRow {
   display: flex; }
   .FilterRow .Label__dark {
     flex: 4; }
+  .FilterRow .Rating {
+    flex: 1; }
 
 .CheckBox {
   flex: 0 0 20px; }
@@ -545,12 +550,12 @@ template {
   margin-right: 2%;
   max-height: 36px; }
   .ResultsHeader .Label {
-    flex: 1;
     margin-top: 2%; }
-    .ResultsHeader .Label__margin {
+    .ResultsHeader .Label__left {
       margin-left: 2%;
-      margin-right: 2%;
-      margin-top: 2%; }
+      margin-right: 2%; }
+    .ResultsHeader .Label__right {
+      flex: 1; }
   .ResultsHeader .Select {
     margin-top: 2%;
     margin-right: 2%; }
@@ -607,14 +612,21 @@ template {
   margin-bottom: 30px; }
 
 .ResultsItem {
-  margin: auto; }
+  margin: auto;
+  padding: 2%; }
   .ResultsItem .BookImg {
     width: 100%; }
 
+.Marked {
+  border: 1px solid #56c47a; }
+  .Marked .Label__marked {
+    color: #56c47a; }
+
 .RatingLayout {
+  display: flex;
   align-items: center; }
-  .RatingLayout .Heart {
-    float: right; }
+  .RatingLayout .Rating {
+    flex: 1; }
 
 .FirstSelectBox {
   border-top: 1px solid;

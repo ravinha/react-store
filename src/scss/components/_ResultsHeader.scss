@@ -5,12 +5,13 @@
   margin-right: 2%;
   max-height: 36px;
   & .Label {
-    flex: 1;
     margin-top: 2%;
-    &__margin {
+    &__left {
       margin-left: 2%;
       margin-right: 2%;
-      margin-top: 2%;
+    }
+    &__right {
+      flex: 1;
     }
   }
   & .Select {

@@ -25,9 +25,13 @@ export default class FiltersView extends React.Component {
                     filters={filters.size}
                     activateFilter={(filter) => this.props.activateFilter("size", filters.size, filter)}
                 />
-                {/*<FilterBlock*/}
-                {/*title="Customer Rating"*/}
-                {/*/>*/}
+                <FilterBlock
+                    title="Customer Rating"
+                    subTitle="At least"
+                    type="rating"
+                    filters={filters.rating}
+                    activateFilter={(filter) => this.props.activateFilter("rating", filters.rating, filter)}
+                />
                 <FilterBlock
                     title="Favorite"
                     filters={filters.favorites}

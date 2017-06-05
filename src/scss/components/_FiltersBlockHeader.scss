@@ -1,12 +1,18 @@
 .FiltersBlockHeader {
-  align-items: center;
-  display: flex;
-  padding-bottom: 10px;
+
+  & .TitleHeader {
+    align-items: center;
+    display: flex;
+    & .Label {
+      flex: 1;
+    }
+    &__close {
+      float: right;
+    }
+  }
 
   & .Label {
-    flex: 1;
-  }
-  &__close {
-    float: right;
+    padding-top: 3px;
+    padding-bottom: 3px;
   }
 }

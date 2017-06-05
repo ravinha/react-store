@@ -11,10 +11,11 @@ export default class ResultsHeader extends React.Component {
                 <Label
                     color="dark"
                     bold={true}
-                    className="margin"
+                    className="left"
                     content={`Search Results: `}
                 />
                 <Label
+                    className={"right"}
                     content={`${this.props.count}`}/>
                 <Select
                     items={["20", "40", "80", "All"]}

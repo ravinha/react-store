@@ -1,6 +1,15 @@
 .ResultsItem {
   margin: auto;
+  padding: 2%;
   & .BookImg {
     width: 100%;
+  }
+}
+
+.Marked {
+  border: 1px solid rgb(86, 196, 122);
+
+  & .Label__marked {
+    color: rgb(86, 196, 122);
   }
 }

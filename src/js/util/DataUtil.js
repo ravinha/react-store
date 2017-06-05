@@ -5,6 +5,10 @@ var DataUtil = {
             size: [{item: "90x50mm", count: 0, chosen: false}, {item: "85x55mm", count: 0, chosen: false}],
             favorites: [{item: "Only favorites", count: 0, chosen: false}],
             orientation: [{item: "horizontal", count: 0, chosen: true}, {item: "vertical", count: 0, chosen: false}],
+            rating: [
+                {item: 5, count: 0, chosen: false},{item: 4, count: 0, chosen: false},
+                {item: 3, count: 0, chosen: false},{item: 2, count: 0, chosen: false},
+                {item: 1, count: 0, chosen: false}],
             industry: [
                 {item: "All", count: model.books.length, chosen: false},
                 {item: "Automotive", count: 0, chosen: true}, {item: "Fashion", count: 0, chosen: false},
@@ -25,6 +29,7 @@ var DataUtil = {
             this.fillCounters(filters.industry, model.books[i].industry);
             this.fillCounters(filters.style, model.books[i].style);
             this.fillCounters(filters.orientation, model.books[i].orientation);
+            this.fillCounters(filters.rating, model.books[i].rating);
 
             if (model.books[i].isFavorite) {
                 filters.favorites[0].count += 1;

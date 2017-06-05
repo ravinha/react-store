@@ -25,6 +25,7 @@ export default class RootView extends React.Component {
         var sizeFilters = filters.size.filter(filter => filter.chosen);
         var styleFilters = filters.style.filter(filter => filter.chosen);
         var orientationFilters = filters.orientation.filter(filter => filter.chosen);
+        var ratingFilters = filters.rating.filter(filter => filter.chosen);
 
         return initialModel.books.filter(book => {
             return (
@@ -32,7 +33,8 @@ export default class RootView extends React.Component {
                 (industryFilters.length === 0 || industryFilters.some(filter => filter.item === book.industry || filter.item === "All")) &&
                 (sizeFilters.length === 0 || sizeFilters.some(filter => filter.item === book.size)) &&
                 (styleFilters.length === 0 || styleFilters.some(filter => filter.item === book.style || filter.item === "All")) &&
-                (orientationFilters.length === 0 || orientationFilters.some(filter => filter.item === book.orientation))
+                (orientationFilters.length === 0 || orientationFilters.some(filter => filter.item === book.orientation)) &&
+                (ratingFilters.length === 0 || ratingFilters.some(filter => filter.item === book.rating))
             )
         });
     }

@@ -46,7 +46,9 @@ export default class ResultsView extends React.Component {
         var filtersChosen = this.props.filters.size.concat(
             this.props.filters.favorites,
             this.props.filters.industry,
-            this.props.filters.style
+            this.props.filters.style,
+            this.props.filters.orientation,
+            this.props.filters.rating
         ).filter(filter => filter.chosen);
 
         var maxPages = Math.ceil(this.props.books.length / this.state.itemsPerPage);

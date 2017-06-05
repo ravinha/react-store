@@ -8,7 +8,7 @@ export default class Label extends React.Component {
         var bold = this.props.bold ? " Label__bold" : "";
         var className = this.props.className ? " Label__" + this.props.className : "";
         return (
-            <div className={color + bold + className}>
+            <div className={"Label " + color + bold + className}>
                 {this.props.content}
             </div>
         );

@@ -1,4 +1,5 @@
 import React from "react";
+import * as ArrayUtils from "../../util/ArrayUtil";
 
 export default class LayoutSelector extends React.Component {
 
@@ -18,19 +19,15 @@ export default class LayoutSelector extends React.Component {
     }
 
     onMouseEnterLeave(entered) {
-        console.log("onMouseEnterLeave")
         this.setState({
             entered: this.props.selected || entered
         });
-        console.log("onMouseEnterLeave end")
     }
 
     selectColumns() {
-        console.log("select columns")
         if (!this.props.selected) {
             this.props.selectColumns(this.props.columns);
         }
-        console.log("select columns end")
     }
 
     render() {
@@ -43,12 +40,12 @@ export default class LayoutSelector extends React.Component {
                 onMouseLeave={() => this.onMouseEnterLeave(false)}
             >
                 {
-                    [...Array(this.props.columns).keys()].map((row, i) =>
+                    ArrayUtils.getNextNumbers(this.props.columns).map((row, i) =>
                         <div
                             key={i}
                             className="LayoutSelector__row">
                             {
-                                [...Array(this.props.columns).keys()].map((row,j) =>
+                                ArrayUtils.getNextNumbers(this.props.columns).map((row,j) =>
                                     <div
                                         key={j}
                                         className="LayoutSelector__rectangle"/>
