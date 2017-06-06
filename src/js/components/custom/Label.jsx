@@ -1,16 +1,15 @@
 import React from "react";
 
-export default class Label extends React.Component {
+const Label = ({color, bold, className, content}) => {
 
-
-    render() {
-        var color = this.props.color === "dark" ? "Label__dark" : "Label";
-        var bold = this.props.bold ? " Label__bold" : "";
-        var className = this.props.className ? " Label__" + this.props.className : "";
+        var _color = color === "dark" ? "Label__dark" : "Label";
+        var _bold = bold ? " Label__bold" : "";
+        var _className = className ? " Label__" + className : "";
         return (
-            <div className={"Label " + color + bold + className}>
-                {this.props.content}
+            <div className={"Label " + _color + _bold + _className}>
+                {content}
             </div>
         );
-    }
-}
+};
+
+export default Label;

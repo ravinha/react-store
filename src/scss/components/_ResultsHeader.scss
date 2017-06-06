@@ -1,21 +1,22 @@
-//TODO variables everywhere
+@import "../core/_layout";
+
 .ResultsHeader {
   display: flex;
-  border-left: 0.5px solid rgb(155,155,155);
-  margin-right: 2%;
-  max-height: 36px;
+  border-left: $border $gray;
+  margin-right: $custom_margin;
+  max-height: 42px;
   & .Label {
-    margin-top: 2%;
+    margin-top: $custom_margin;
     &__left {
-      margin-left: 2%;
-      margin-right: 2%;
+      margin-left: $custom_margin;
+      margin-right: $custom_margin;
     }
     &__right {
       flex: 1;
     }
   }
   & .Select {
-    margin-top: 2%;
-    margin-right: 2%;
+    margin-top: $custom_margin;
+    margin-right: $custom_margin;
   }
 }

@@ -3,26 +3,24 @@ import Checkbox from "../custom/Checkbox.jsx";
 import Label from "../custom/Label.jsx";
 import Rating from "../custom/Rating.jsx";
 
-export default class FilterRow extends React.Component {
-
-
-    render() {
+const FilterRow = ({type, chosen, item, count, onStateChanged}) => {
         return (
             <div className="FilterRow">
                 <Checkbox
-                    checked={this.props.chosen}
-                    onStateChanged={this.props.onStateChanged}
+                    checked={chosen}
+                    onStateChanged={onStateChanged}
                 />
-                { this.props.type === "rating" ?
-                    <Rating rating={this.props.item}/>
+                { type === "rating" ?
+                    <Rating rating={item}/>
                     :
                     <Label
                         color="dark"
-                        content={this.props.item}
+                        content={item}
                     />
                 }
-                <Label content={this.props.count}/>
+                <Label content={count}/>
             </div>
         );
-    }
-}
+};
+
+export default FilterRow;

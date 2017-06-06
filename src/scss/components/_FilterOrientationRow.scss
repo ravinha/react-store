@@ -1,3 +1,9 @@
+@import "../core/_layout";
+
+$orientationBackground: rgb(218, 218, 218);
+$rectangle_length: 45px;
+$rectangle_width: 30px;
+
 .FilterOrientationRow {
   display: flex;
   align-items: center;
@@ -5,34 +11,34 @@
 
 .Rectangle {
   margin: auto;
-  border-radius: 2px;
-  background: rgb(218, 218, 218);
+  border-radius: $border_radius;
+  background: $orientationBackground;
   position: relative;
   img {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    top: $relative_position;
+    bottom: $relative_position;
+    left: $relative_position;
+    right: $relative_position;
     margin: auto;
   }
 }
 
 .OrientationChecked {
-  background: rgb(86, 196, 122) !important;
+  background: $primary !important;
 }
 
 .horizontalRectangle .RectangleDiv {
   @extend .Rectangle;
-  width: 45px;
-  height: 30px;
+  width: $rectangle_length;
+  height: $rectangle_width;
   top: -10px;
 }
 
 .verticalRectangle .RectangleDiv {
   @extend .Rectangle;
-  width: 30px;
-  height: 45px;
+  width: $rectangle_width;
+  height: $rectangle_length;
 }
 
 .FilterOrientationRectangle {
@@ -44,7 +50,7 @@
   position: relative;
   & .Label {
     position: absolute;
-    left: 0;
-    right: 0;
+    left: $relative_position;
+    right: $relative_position;
   }
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import ResultsItem from "./ResultsItem.jsx";
+import ResultsRow from "./ResultsRow.jsx";
 import * as ArrayUtils from "../../util/ArrayUtil";
 
 export default class ResultsList extends React.Component {
@@ -19,49 +19,31 @@ export default class ResultsList extends React.Component {
     }
 
     render() {
-        var rows = Math.floor((this.props.books.length - (this.props.pageNumber - 1) * this.props.itemsPerPage) / this.props.columns);
-        var lastRowBooksCount = (this.props.books.length - (this.props.pageNumber - 1) * this.props.itemsPerPage) % this.props.columns;
-        var maxRowsPerPage = Math.floor(this.props.itemsPerPage / this.props.columns);
+        var booksLeft = (this.props.books.length - (this.props.pageNumber - 1) * this.props.itemsPerPage);
+        var rows = Math.ceil(booksLeft / this.props.columns);
+        var maxRowsPerPage = Math.ceil(this.props.itemsPerPage / this.props.columns);
+        var rowsPerPage = this.props.isLastPage ? rows : maxRowsPerPage;
+        var lastRowBooksCount = this.props.isLastPage? booksLeft % this.props.columns : this.props.itemsPerPage % this.props.columns;
+        var getColumnCount = (row) => {
+            return row === rowsPerPage - 1 && lastRowBooksCount !== 0 ? lastRowBooksCount : this.props.columns
+        };
         return (
             <div className="ResultsList">
                 {
-                    ArrayUtils.getNextNumbers(rows > maxRowsPerPage ? maxRowsPerPage : rows).map((row, i) =>
-                        <div
+                    ArrayUtils.getNextNumbers(rowsPerPage).map((row, i) =>
+                        <ResultsRow
                             key={i}
-                            className="ResultsList__row">
-                            {
-                                ArrayUtils.getNextNumbers(this.props.columns).map((column, j) => {
-                                        var currentBookIndex = (this.props.pageNumber - 1) * this.props.itemsPerPage + row * this.props.columns + column;
-                                        return <ResultsItem
-                                            key={j}
-                                            mark={this.mark}
-                                            index={currentBookIndex}
-                                            marked={currentBookIndex === this.state.marked}
-                                            className="ResultsList__rectangle__unchecked"
-                                            book={this.props.books[currentBookIndex]}
-                                        />
-                                    }
-                                )
-                            }
-                        </div>
+                            mark={this.mark}
+                            marked={this.state.marked}
+                            books={this.props.books}
+                            pageNumber={this.props.pageNumber}
+                            itemsPerPage={this.props.itemsPerPage}
+                            row={row}
+                            columns={this.props.columns}
+                            getColumnCount={getColumnCount}
+                        />
                     )
                 }
-                <div className="ResultsList__row">
-                    {
-                        ArrayUtils.getNextNumbers(rows > maxRowsPerPage ? 0 : lastRowBooksCount).map((column, j) => {
-                                var currentBookIndex = (this.props.pageNumber - 1) * this.props.itemsPerPage + rows * this.props.columns + column;
-                                return <ResultsItem
-                                    key={j}
-                                    mark={this.mark}
-                                    index={currentBookIndex}
-                                    marked={currentBookIndex === this.state.marked}
-                                    className="ResultsList__rectangle__unchecked"
-                                    book={this.props.books[currentBookIndex]}
-                                />
-                            }
-                        )
-                    }
-                </div>
             </div>
         );
     }

@@ -1,6 +1,6 @@
 var ArrayUtil = {
     getNextNumbers: function (row) {
-        return [...Array(row).keys()];
+        return [...new Array(row).keys()];
     }
 
 };

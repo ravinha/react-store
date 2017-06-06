@@ -1,5 +1,7 @@
+@import "../core/_layout";
+
 .ResultsList {
-  border-left: 0.5px solid rgb(155,155,155);
+  border-left: $border $gray;
   padding-top: 30px;
   &__row {
     display: flex;

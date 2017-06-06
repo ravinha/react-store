@@ -1,3 +1,5 @@
+$padding: 3px;
+
 .FiltersBlockHeader {
 
   & .TitleHeader {
@@ -12,7 +14,7 @@
   }
 
   & .Label {
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-top: $padding;
+    padding-bottom: $padding;
   }
 }

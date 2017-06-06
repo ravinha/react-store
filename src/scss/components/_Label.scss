@@ -1,15 +1,17 @@
+@import "../core/_layout";
+
 .Label {
-  color: rgb(155, 155, 155);
+  color: $gray;
   &__dark {
-    color: rgb(56, 56, 56);
+    color: $dark;
   }
   &__bold {
     font-weight: bold;
   }
   &__small {
-    font-size: 14px;
+    font-size: $small_font;
   }
   &__big {
-    font-size: 18px;
+    font-size: $big_font;
   }
 }

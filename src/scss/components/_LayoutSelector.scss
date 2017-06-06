@@ -1,10 +1,14 @@
+@import "../core/_layout";
+
+$selector_width: 20px;
+
 .LayoutSelector {
   background: white;
-  width: 20px;
-  height: 20px;
+  width: $selector_width;
+  height: $selector_width;
   display: flex;
   flex-direction: column;
-  margin-top: 2%;
+  margin-top: $custom_margin;
   margin-right: 1%;
 
   &__row {
@@ -15,12 +19,12 @@
   &__rectangle {
     flex: 1;
     margin: 1px;
-    background: grey;
+    background: $gray;
   }
 }
 
 .EnteredLayout {
   & .LayoutSelector__rectangle {
-    background: rgb(86, 196, 122);
+    background: $primary;
   }
 }

@@ -2,17 +2,15 @@ import React from "react";
 import FilterBlockHeader from "../FilterBlockHeader.jsx";
 import FilterOrientationRow from "./FilterOrientationRow.jsx";
 
-export default class FilterOrientationBlock extends React.Component {
-
-    render() {
-        return (
-            <div className="FilterBlock">
-                <FilterBlockHeader title="Orientation"/>
-                <FilterOrientationRow
-                    filters={this.props.filters}
-                    activateFilter={this.props.activateFilter}
-                />
-            </div>
-        );
-    }
-}
+const FilterOrientationBlock = ({filters, activateFilter}) => {
+    return (
+        <div className="FilterBlock">
+            <FilterBlockHeader title="Orientation"/>
+            <FilterOrientationRow
+                filters={filters}
+                activateFilter={activateFilter}
+            />
+        </div>
+    );
+};
+export default FilterOrientationBlock;

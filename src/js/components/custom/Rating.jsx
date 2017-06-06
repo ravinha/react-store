@@ -1,23 +1,22 @@
 import React from "react";
 import * as ArrayUtil from "../../util/ArrayUtil";
 
-export default class Rating extends React.Component {
+const Rating = ({rating}) => {
 
+    let getStarImg = (row) => {
+        return row < rating ? "YellowStar" : "GreyStar";
+    };
 
-    render() {
-        let getStarImg = (row) => {
-            return row < this.props.rating ? "YellowStar" : "GreyStar";
-        };
+    return (
+        <div className="Rating">
+            {
+                ArrayUtil.getNextNumbers(5).map((row, i) =>
+                    <img key={i} className="RatingStar"
+                         src={require(`../../../resources/icons/${getStarImg(row)}.png`)}/>
+                )
+            }
+        </div>
+    );
+};
 
-        return (
-            <div className="Rating">
-                {
-                    ArrayUtil.getNextNumbers(5).map((row, i) =>
-                        <img key={i} className="RatingStar"
-                             src={require(`../../../resources/icons/${getStarImg(row)}.png`)}/>
-                    )
-                }
-            </div>
-        );
-    }
-}
+export default Rating;

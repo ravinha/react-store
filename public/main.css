@@ -539,16 +539,16 @@ template {
   .LayoutSelector__rectangle {
     flex: 1;
     margin: 1px;
-    background: grey; }
+    background: #9b9b9b; }
 
 .EnteredLayout .LayoutSelector__rectangle {
   background: #56c47a; }
 
 .ResultsHeader {
   display: flex;
-  border-left: 0.5px solid #9b9b9b;
+  border-left: 1px solid #9b9b9b;
   margin-right: 2%;
-  max-height: 36px; }
+  max-height: 42px; }
   .ResultsHeader .Label {
     margin-top: 2%; }
     .ResultsHeader .Label__left {
@@ -563,7 +563,7 @@ template {
 .ResultsFilterBar {
   display: flex;
   align-items: center;
-  border-left: 0.5px solid #9b9b9b; }
+  border-left: 1px solid #9b9b9b; }
   .ResultsFilterBar .Label__dark {
     margin: 2%; }
   .ResultsFilterBar .FilterBox {
@@ -602,7 +602,7 @@ template {
     font-size: 18px; }
 
 .ResultsList {
-  border-left: 0.5px solid #9b9b9b;
+  border-left: 1px solid #9b9b9b;
   padding-top: 30px; }
   .ResultsList__row {
     display: flex;

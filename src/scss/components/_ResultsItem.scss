@@ -1,15 +1,17 @@
+@import "../core/_layout";
+
 .ResultsItem {
   margin: auto;
   padding: 2%;
   & .BookImg {
-    width: 100%;
+    width: $full_size;
   }
 }
 
 .Marked {
-  border: 1px solid rgb(86, 196, 122);
+  border: $border $primary;
 
   & .Label__marked {
-    color: rgb(86, 196, 122);
+    color: $primary;
   }
 }

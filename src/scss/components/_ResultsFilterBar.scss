@@ -1,13 +1,15 @@
+@import "../core/_layout";
+
 .ResultsFilterBar {
   display: flex;
   align-items: center;
-  border-left: 0.5px solid rgb(155, 155, 155);
+  border-left: $border $gray;
   & .Label__dark {
-    margin: 2%;
+    margin: $custom_margin;
   }
   & .FilterBox {
-    border: 1px solid;
-    border-radius: 2px;
+    border: $border;
+    border-radius: $border_radius;
     margin-right: 2px;
     display: flex;
     align-items: center;
