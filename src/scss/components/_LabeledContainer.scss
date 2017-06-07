@@ -1,0 +1,9 @@
+@import "../core/_layout";
+
+.LabeledContainer {
+  text-align: center;
+  border: $border $gray;
+  & .Label__margin {
+    margin: $custom_margin;
+  }
+}

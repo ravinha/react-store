@@ -5,7 +5,10 @@ const FilterBox = ({name}) => {
     return (
         <div className="FilterBox">
             <Label content={name}/>
-            <img src={require('../../../resources/icons/CloseGrey.png')} className="FilterBox__close"/>
+            <img
+                src={require('../../../resources/icons/CloseGrey.png')}
+                className="FilterBox__close"
+            />
         </div>
     );
 };

@@ -6,7 +6,10 @@ const RatingLayout = ({isFavorite, rating}) => {
     return (
         <div className="RatingLayout">
             <Rating rating={rating}/>
-            <img className="Heart" src={require(`../../../resources/icons/${heartIconPath}.png`)}/>
+            <img
+                className="Heart"
+                src={require(`../../../resources/icons/${heartIconPath}.png`)}
+            />
         </div>
     );
 };

@@ -11,8 +11,10 @@ const Rating = ({rating}) => {
         <div className="Rating">
             {
                 ArrayUtil.getNextNumbers(5).map((row, i) =>
-                    <img key={i} className="RatingStar"
-                         src={require(`../../../resources/icons/${getStarImg(row)}.png`)}/>
+                    <img
+                        key={i} className="RatingStar"
+                        src={require(`../../../resources/icons/${getStarImg(row)}.png`)}
+                    />
                 )
             }
         </div>

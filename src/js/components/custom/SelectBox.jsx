@@ -25,18 +25,20 @@ export default class SelectBox extends React.Component {
         var hiddenClass = this.props.isDropped ? "" : " HiddenBox";
         var enteredClass = this.state.entered ? " EnteredBox" : "";
         return (
-            <div className={`SelectBox${firstClass}${lastClass}${hiddenClass}${enteredClass}`}
-                 onClick={() => this.props.select(this.props.name)}
-                 onMouseEnter={() => this.onMouseEnterLeave(true)}
-                 onMouseLeave={() => this.onMouseEnterLeave(false)}
-            >
+            <div
+                className={`SelectBox${firstClass}${lastClass}${hiddenClass}${enteredClass}`}
+                onClick={() => this.props.select(this.props.name)}
+                onMouseEnter={() => this.onMouseEnterLeave(true)}
+                onMouseLeave={() => this.onMouseEnterLeave(false)}>
                 {
                     first ?
                         <div className="FirstSelectBoxContent">
                             <Label content={this.props.title}/>
                             <Label content={this.props.name}/>
-                            <img src={require('../../../resources/icons/DropDown.png')}
-                                 className="SelectBox__dropDown"/>
+                            <img
+                                src={require('../../../resources/icons/DropDown.png')}
+                                className="SelectBox__dropDown"
+                            />
                         </div>
                         :
                         <Label content={this.props.name}/>

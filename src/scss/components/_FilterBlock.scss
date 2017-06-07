@@ -1,3 +1,6 @@
 .FilterBlock {
   margin-bottom: 30px;
+  & .Label__margin {
+    margin-bottom: 10px;
+  }
 }

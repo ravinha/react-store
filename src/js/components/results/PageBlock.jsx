@@ -12,7 +12,7 @@ export default class PageBlock extends React.Component {
         }
     }
 
-    componentWillReceiveProps(nextProps){
+    componentWillReceiveProps(nextProps) {
         this.setState({
             entered: nextProps.selected
         })
@@ -33,14 +33,15 @@ export default class PageBlock extends React.Component {
     render() {
         var enteredClass = this.state.entered ? " EnteredBlock" : "";
         return (
-            <div className={`PageBlock${enteredClass}`}
-                 onClick={this.selectPage}
-                 onMouseEnter={() => this.onMouseEnterLeave(true)}
-                 onMouseLeave={() => this.onMouseEnterLeave(false)}
-            >
+            <div
+                className={`PageBlock${enteredClass}`}
+                onClick={this.selectPage}
+                onMouseEnter={() => this.onMouseEnterLeave(true)}
+                onMouseLeave={() => this.onMouseEnterLeave(false)}>
                 <Label
                     className={this.props.className}
-                    content={this.props.page.number}/>
+                    content={this.props.page.number}
+                />
             </div>
         );
     }

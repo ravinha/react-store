@@ -14,7 +14,8 @@ const ResultsHeader = ({count, selectItemsPerPage, selectColumns, columns}) => {
             />
             <Label
                 className={"right"}
-                content={`${count}`}/>
+                content={`${count}`}
+            />
             <Select
                 items={["20", "40", "80", "All"]}
                 title="Show:"

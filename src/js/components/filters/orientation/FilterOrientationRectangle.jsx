@@ -35,7 +35,8 @@ export default class FilterOrientationRectangle extends React.Component {
                 </div>
                 <Label
                     color="dark"
-                    content={this.props.content}/>
+                    content={this.props.content}
+                />
             </div>
         );
     }

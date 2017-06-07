@@ -62,7 +62,7 @@ export default class ResultsView extends React.Component {
                 <ResultsList
                     itemsPerPage={itemsPerPageNumber}
                     pageNumber={this.state.pageNumber}
-                    isLastPage={maxPages === this.state.pageNumber}
+                    isLastPage={maxPages === this.state.pageNumber || maxPages === 0}
                     columns={this.state.columns}
                     books={this.props.books}
                 />

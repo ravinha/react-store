@@ -8,14 +8,18 @@ const FilterBlockHeader = ({title, subTitle = ""}) => {
                 <Label
                     bold={true}
                     className="big"
-                    content={title}/>
-                <img src={require('../../../resources/icons/close_mark.png')}
-                     className="TitleHeader__close"/>
+                    content={title}
+                />
+                <img
+                    src={require('../../../resources/icons/close_mark.png')}
+                    className="TitleHeader__close"
+                />
             </div>
             <Label
                 bold={true}
                 color="dark"
-                content={subTitle}/>
+                content={subTitle}
+            />
         </div>
     );
 };

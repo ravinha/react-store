@@ -10,7 +10,7 @@ export default class ResultsItem extends React.Component {
     }
 
     click() {
-        if(this.props.marked){
+        if (this.props.marked) {
             this.props.mark(-1)
         } else {
             this.props.mark(this.props.index)
@@ -18,7 +18,7 @@ export default class ResultsItem extends React.Component {
     }
 
     render() {
-        var markedClassName = this.props.marked? " Marked":"";
+        var markedClassName = this.props.marked ? " Marked" : "";
         return (
             <div className={`ResultsItem${markedClassName}`} onClick={this.click}>
                 <img
@@ -32,12 +32,14 @@ export default class ResultsItem extends React.Component {
                     bold={true}
                     color="dark"
                     className={this.props.marked ? "marked" : ""}
-                    content={this.props.book.title}/>
+                    content={this.props.book.title}
+                />
                 <Label
                     bold={true}
                     color="dark"
                     className="small"
-                    content={this.props.book.size}/>
+                    content={this.props.book.size}
+                />
             </div>
         );
     }

@@ -426,7 +426,7 @@ template {
 
 .FilterRow {
   display: flex; }
-  .FilterRow .Label__dark {
+  .FilterRow .Label__FilterContent {
     flex: 4; }
   .FilterRow .Rating {
     flex: 1; }
@@ -476,7 +476,8 @@ template {
 
 .ColorRow {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-bottom: 10px; }
 
 .ColorBlock, .Color__1, .Color__2, .Color__3, .Color__4, .Color__5, .Color__6, .Color__7, .Color__8, .Color__9, .Color__10 {
   width: 50px;
@@ -594,6 +595,8 @@ template {
   color: #9b9b9b; }
   .Label__dark {
     color: #383838; }
+  .Label__primary {
+    color: #56c47a; }
   .Label__bold {
     font-weight: bold; }
   .Label__small {
@@ -610,6 +613,8 @@ template {
 
 .FilterBlock {
   margin-bottom: 30px; }
+  .FilterBlock .Label__margin {
+    margin-bottom: 10px; }
 
 .ResultsItem {
   margin: auto;
@@ -681,3 +686,43 @@ template {
   background: #56c47a; }
   .EnteredBlock .Label {
     color: white; }
+
+.LabeledContainer {
+  text-align: center;
+  border: 1px solid #9b9b9b; }
+  .LabeledContainer .Label__margin {
+    margin: 2%; }
+
+.DropDownIcon {
+  flex: 0 0 20px;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  top: 0;
+  left: 0; }
+  .DropDownIcon:after {
+    background-color: #56c47a;
+    width: 8px;
+    height: 2px;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    position: absolute;
+    top: 7px;
+    left: 4px;
+    content: ""; }
+  .DropDownIcon:before {
+    background-color: #56c47a;
+    width: 2px;
+    height: 8px;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    content: ""; }

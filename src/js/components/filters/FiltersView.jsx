@@ -38,12 +38,14 @@ const FiltersView = ({activateFilter, filters}) => {
                 title="Industry"
                 filters={filters.industry}
                 activateFilter={(filter) => activateFilter("industry", filters.industry, filter)}
+                visibleFiltersCount={7}
             />
             <FilterColorBlock/>
             <FilterBlock
                 title="Style"
                 filters={filters.style}
                 activateFilter={(filter) => activateFilter("style", filters.style, filter)}
+                visibleFiltersCount={9}
             />
         </div>
     );

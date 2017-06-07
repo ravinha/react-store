@@ -22,10 +22,8 @@ export default class ColorFilter extends React.Component {
             <div
                 onClick={this.check}
                 className={`Color__${this.props.color}${checkStyle}`}>
-
                 {  this.state.checked && !this.props.last &&
                 <img src={require(`../../../../resources/icons/Check.png`)}/>  }
-
                 {  this.props.last && <img src={require(`../../../../resources/icons/Add.png`)}/>  }
             </div>
         );
