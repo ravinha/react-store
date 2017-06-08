@@ -479,52 +479,18 @@ template {
   flex-wrap: wrap;
   margin-bottom: 10px; }
 
-.ColorBlock, .Color__1, .Color__2, .Color__3, .Color__4, .Color__5, .Color__6, .Color__7, .Color__8, .Color__9, .Color__10 {
-  width: 50px;
-  height: 50px;
-  position: relative; }
-  .ColorBlock img, .Color__1 img, .Color__2 img, .Color__3 img, .Color__4 img, .Color__5 img, .Color__6 img, .Color__7 img, .Color__8 img, .Color__9 img, .Color__10 img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto; }
+.ChooseColorSign {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; }
 
 .BlockChecked {
   margin: auto;
   width: 43px;
   height: 43px; }
-
-.Color__1 {
-  background: #6a71e6; }
-
-.Color__2 {
-  background: #0192ff; }
-
-.Color__3 {
-  background: #61d2fe; }
-
-.Color__4 {
-  background: #48dc6c; }
-
-.Color__5 {
-  background: #fe4a65; }
-
-.Color__6 {
-  background: #ff5534; }
-
-.Color__7 {
-  background: orange; }
-
-.Color__8 {
-  background: #fed201; }
-
-.Color__9 {
-  background: #9fa0a4; }
-
-.Color__10 {
-  background: white; }
 
 .LayoutSelector {
   background: white;
@@ -606,7 +572,9 @@ template {
 
 .ResultsList {
   border-left: 1px solid #9b9b9b;
-  padding-top: 30px; }
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap; }
   .ResultsList__row {
     display: flex;
     padding: 2px; }
@@ -616,11 +584,17 @@ template {
   .FilterBlock .Label__margin {
     margin-bottom: 10px; }
 
-.ResultsItem {
+.ResultsItem, .ResultsItem__2, .ResultsItem__3, .ResultsItem__4 {
   margin: auto;
   padding: 2%; }
-  .ResultsItem .BookImg {
+  .ResultsItem .BookImg, .ResultsItem__2 .BookImg, .ResultsItem__3 .BookImg, .ResultsItem__4 .BookImg {
     width: 100%; }
+  .ResultsItem__2 {
+    width: 30%; }
+  .ResultsItem__3 {
+    width: 25%; }
+  .ResultsItem__4 {
+    width: 20%; }
 
 .Marked {
   border: 1px solid #56c47a; }

@@ -3,6 +3,8 @@
 .ResultsList {
   border-left: $border $gray;
   padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
   &__row {
     display: flex;
     padding: 2px;

@@ -1,6 +1,6 @@
 import React from "react";
-import ResultsRow from "./ResultsRow.jsx";
 import * as ArrayUtils from "../../util/ArrayUtil";
+import ResultsItem from "./ResultsItem.jsx";
 
 export default class ResultsList extends React.Component {
 
@@ -19,30 +19,24 @@ export default class ResultsList extends React.Component {
     }
 
     render() {
-        var booksLeft = (this.props.books.length - (this.props.pageNumber - 1) * this.props.itemsPerPage);
-        var rows = Math.ceil(booksLeft / this.props.columns);
-        var maxRowsPerPage = Math.ceil(this.props.itemsPerPage / this.props.columns);
-        var rowsPerPage = this.props.isLastPage ? rows : maxRowsPerPage;
-        var lastRowBooksCount = this.props.isLastPage? booksLeft % this.props.columns : this.props.itemsPerPage % this.props.columns;
-        var getColumnCount = (row) => {
-            return row === rowsPerPage - 1 && lastRowBooksCount !== 0 ? lastRowBooksCount : this.props.columns
-        };
+        var booksOffset = (this.props.pageNumber - 1) * this.props.itemsPerPage;
+        var booksLeft = (this.props.books.length - booksOffset);
+        var booksPerPage = this.props.isLastPage ? booksLeft : this.props.itemsPerPage;
         return (
             <div className="ResultsList">
                 {
-                    ArrayUtils.getNextNumbers(rowsPerPage).map((row, i) =>
-                        <ResultsRow
-                            key={i}
-                            mark={this.mark}
-                            marked={this.state.marked}
-                            books={this.props.books}
-                            pageNumber={this.props.pageNumber}
-                            itemsPerPage={this.props.itemsPerPage}
-                            row={row}
-                            columns={this.props.columns}
-                            getColumnCount={getColumnCount}
-                        />
-                    )
+                    ArrayUtils.getNextNumbers(booksPerPage)
+                        .map((row, i) => {
+                                return <ResultsItem
+                                    key={i}
+                                    mark={this.mark}
+                                    index={booksOffset + row}
+                                    columns={this.props.columns}
+                                    marked={booksOffset + row === this.state.marked}
+                                    book={this.props.books[booksOffset + row]}
+                                />
+                            }
+                        )
                 }
             </div>
         );

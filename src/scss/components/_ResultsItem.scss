@@ -6,6 +6,20 @@
   & .BookImg {
     width: $full_size;
   }
+  &__2 {
+    @extend .ResultsItem;
+    width: 30%;
+  }
+
+  &__3 {
+    @extend .ResultsItem;
+    width: 25%;
+  }
+
+  &__4 {
+    @extend .ResultsItem;
+    width: 20%;
+  }
 }
 
 .Marked {

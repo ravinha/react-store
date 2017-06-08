@@ -4,14 +4,17 @@ import ColorRow from "./ColorRow.jsx";
 import Label from "../../custom/Label.jsx";
 import LabeledContainer from "../../custom/LabeledContainer.jsx";
 
-const FilterColorBlock = () => {
+const FilterColorBlock = ({filters, activateFilter}) => {
     return (
         <div className="FilterBlock">
             <FilterBlockHeader
                 title="Color"
                 subTitle="Choose color(s)"
             />
-            <ColorRow/>
+            <ColorRow
+                filters={filters}
+                activateFilter={activateFilter}
+            />
             <Label
                 className="margin"
                 content="or"

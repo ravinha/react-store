@@ -9,65 +9,17 @@ $block_checked_size: 43px;
   margin-bottom: 10px;
 }
 
-.ColorBlock {
-  width: $block_size;
-  height: $block_size;
-  position: relative;
-  img {
-    position: absolute;
-    top: $relative_position;
-    bottom: $relative_position;
-    left: $relative_position;
-    right: $relative_position;
-    margin: auto;
-  }
+.ChooseColorSign {
+  position: absolute;
+  top: $relative_position;
+  bottom: $relative_position;
+  left: $relative_position;
+  right: $relative_position;
+  margin: auto;
 }
 
 .BlockChecked {
   margin: auto;
   width: $block_checked_size;
   height: $block_checked_size;
-}
-
-.Color {
-  &__1 {
-    @extend .ColorBlock;
-    background: rgb(106, 113, 230);
-  }
-  &__2 {
-    @extend .ColorBlock;
-    background: rgb(1, 146, 255);
-  }
-  &__3 {
-    @extend .ColorBlock;
-    background: rgb(97, 210, 254);
-  }
-  &__4 {
-    @extend .ColorBlock;
-    background: rgb(72, 220, 108);
-  }
-  &__5 {
-    @extend .ColorBlock;
-    background: rgb(254, 74, 101);
-  }
-  &__6 {
-    @extend .ColorBlock;
-    background: rgb(255, 85, 52);
-  }
-  &__7 {
-    @extend .ColorBlock;
-    background: rgb(255, 165, 0);
-  }
-  &__8 {
-    @extend .ColorBlock;
-    background: rgb(254, 210, 1);
-  }
-  &__9 {
-    @extend .ColorBlock;
-    background: rgb(159, 160, 164);
-  }
-  &__10 {
-    @extend .ColorBlock;
-    background: white;
-  }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import FiltersView from "./filters/FiltersView.jsx";
 import ResultsView from "./results/ResultsView.jsx";
-import DataUtil from "../util/DataUtil";
+import DataUtil from "../util/DataUtil.jsx";
 
 export default class RootView extends React.Component {
 
@@ -20,12 +20,13 @@ export default class RootView extends React.Component {
     }
 
     filterBooks(initialModel, filters) {
-        var favoriteFilters = filters.favorites.filter(filter => filter.chosen);
-        var industryFilters = filters.industry.filter(filter => filter.chosen);
-        var sizeFilters = filters.size.filter(filter => filter.chosen);
-        var styleFilters = filters.style.filter(filter => filter.chosen);
-        var orientationFilters = filters.orientation.filter(filter => filter.chosen);
-        var ratingFilters = filters.rating.filter(filter => filter.chosen);
+        var favoriteFilters = filters.find(f => f.name === "Favorites").properties.filter(filter => filter.chosen);
+        var industryFilters = filters.find(f => f.name === "Industry").properties.filter(filter => filter.chosen);
+        var sizeFilters = filters.find(f => f.name === "Size").properties.filter(filter => filter.chosen);
+        var styleFilters = filters.find(f => f.name === "Style").properties.filter(filter => filter.chosen);
+        var orientationFilters = filters.find(f => f.name === "Orientation").properties.filter(filter => filter.chosen);
+        var ratingFilters = filters.find(f => f.name === "Rating").properties.filter(filter => filter.chosen);
+        var colorFilters = filters.find(f => f.name === "Color").properties.filter(filter => filter.chosen);
 
         return initialModel.books.filter(book => {
             return (
@@ -34,7 +35,8 @@ export default class RootView extends React.Component {
                 (sizeFilters.length === 0 || sizeFilters.some(filter => filter.item === book.size)) &&
                 (styleFilters.length === 0 || styleFilters.some(filter => filter.item === book.style || filter.item === "All")) &&
                 (orientationFilters.length === 0 || orientationFilters.some(filter => filter.item === book.orientation)) &&
-                (ratingFilters.length === 0 || ratingFilters.some(filter => filter.item === book.rating))
+                (ratingFilters.length === 0 || ratingFilters.some(filter => filter.item === book.rating)) &&
+                (colorFilters.length === 0 || colorFilters.some(filter => filter.item === book.color))
             )
         });
     }
@@ -47,7 +49,7 @@ export default class RootView extends React.Component {
             }
         }
         var newFilters = this.state.filters;
-        newFilters[`${filtersBlockName}`] = filtersBlock;
+        newFilters.find(f => f.name === filtersBlockName).properties = filtersBlock;
 
         var filteredBooks = this.filterBooks(this.state.initialModel, newFilters);
 

@@ -20,7 +20,7 @@ export default class ResultsItem extends React.Component {
     render() {
         var markedClassName = this.props.marked ? " Marked" : "";
         return (
-            <div className={`ResultsItem${markedClassName}`} onClick={this.click}>
+            <div className={`ResultsItem__${this.props.columns}${markedClassName}`} onClick={this.click}>
                 <img
                     className="BookImg"
                     src={require(`../../../resources/icons/${this.props.book.icon}`)}/>

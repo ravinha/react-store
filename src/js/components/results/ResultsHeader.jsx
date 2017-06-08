@@ -17,9 +17,9 @@ const ResultsHeader = ({count, selectItemsPerPage, selectColumns, columns}) => {
                 content={`${count}`}
             />
             <Select
-                items={["20", "40", "80", "All"]}
+                items={[20, 40, 80, "All"]}
                 title="Show:"
-                primary="20"
+                primary={20}
                 onClick={selectItemsPerPage}
             />
             <LayoutSelector

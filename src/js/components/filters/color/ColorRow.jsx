@@ -1,19 +1,18 @@
 import React from "react";
 import ColorFilter from "./ColorFilter.jsx";
-import * as ArrayUtils from "../../../util/ArrayUtil";
 
-const ColorRow = ({type}) => {
+const ColorRow = ({filters, activateFilter}) => {
 
-    var colors = ArrayUtils.getNextNumbers(10);
     return (
         <div className="ColorRow">
             {
-                colors.map((color, i) =>
+                filters.concat([10]).map((filter, i) =>
                     <ColorFilter
                         key={i}
-                        last={color === 9}
-                        color={color + 1}
-                        type={type}
+                        last={i === 9}
+                        color={filter.item}
+                        checked={filter.chosen}
+                        activateFilter={() => activateFilter(filter)}
                     />
                 )
             }

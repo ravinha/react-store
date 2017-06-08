@@ -38,12 +38,13 @@ export default class ResultsView extends React.Component {
     }
 
     render() {
-        var filtersChosen = this.props.filters.size.concat(
-            this.props.filters.favorites,
-            this.props.filters.industry,
-            this.props.filters.style,
-            this.props.filters.orientation,
-            this.props.filters.rating
+        var filtersChosen = this.props.filters.find(f => f.name === "Size").properties.concat(
+            this.props.filters.find(f => f.name === "Favorites").properties,
+            this.props.filters.find(f => f.name === "Industry").properties,
+            this.props.filters.find(f => f.name === "Style").properties,
+            this.props.filters.find(f => f.name === "Orientation").properties,
+            this.props.filters.find(f => f.name === "Rating").properties,
+            this.props.filters.find(f => f.name === "Color").properties
         ).filter(filter => filter.chosen);
 
         var itemsPerPageNumber = this.state.itemsPerPage === "All" ? this.props.books.length : this.state.itemsPerPage;
