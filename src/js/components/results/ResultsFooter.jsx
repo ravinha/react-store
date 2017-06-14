@@ -5,7 +5,7 @@ import PageBlock from "./PageBlock.jsx";
 const ResultsFooter = ({page, max, selectPage}) => {
     return (
         <div className="ResultsFooter">
-            <img src={require('../../../resources/icons/ArrowLeft.png')}/>
+            <img src={require('../../../resources/icons/ArrowLeft.png')}/>      //powinno być realizowane jako <a> bądź <button>, grafika jako svg/icon font
             {
                 generatePagesNumbers(page, max).map((_page, i) =>
                     <PageBlock

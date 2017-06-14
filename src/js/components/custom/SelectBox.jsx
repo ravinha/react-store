@@ -1,6 +1,8 @@
 import React from "react";
 import Label from "./Label.jsx";
 
+
+//przeczytaj komentarz w Select.jsx
 export default class SelectBox extends React.Component {
 
     constructor(props) {

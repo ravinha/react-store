@@ -15,15 +15,18 @@ export default class ResultsItem extends React.Component {
         } else {
             this.props.mark(this.props.index)
         }
+
+        //da się napisać to w jednej linijce :)
+        //zmień też nazwę. Samo click nie mówi nic
     }
 
     render() {
         var markedClassName = this.props.marked ? " Marked" : "";
         return (
-            <div className={`ResultsItem__${this.props.columns}${markedClassName}`} onClick={this.click}>
+            <div className={`ResultsItem__${this.props.columns}${markedClassName}`} onClick={this.click}>   //użyj classname z npm'a
                 <img
                     className="BookImg"
-                    src={require(`../../../resources/icons/${this.props.book.icon}`)}/>
+                    src={require(`../../../resources/icons/${this.props.book.icon}`)}/> //brakuje alt'a
                 <RatingLayout
                     rating={this.props.book.rating}
                     isFavorite={this.props.book.isFavorite}

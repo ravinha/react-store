@@ -16,6 +16,7 @@ export default class ColorFilter extends React.Component {
         });
     }
 
+    //zmiana nazwy, check jest zbyt ogólniokowa
     check() {
         if (!this.props.last) {
             this.setState({
@@ -42,7 +43,7 @@ export default class ColorFilter extends React.Component {
                 {  this.state.checked && !this.props.last &&
                 <img className="ChooseColorSign" src={require(`../../../../resources/icons/Check.png`)}/>  }
                 {  this.props.last &&
-                <img className="ChooseColorSign" src={require(`../../../../resources/icons/Add.png`)}/>  }
+                <img className="ChooseColorSign" src={require(`../../../../resources/icons/Add.png`)}/>  }  //grafiki jak określiłem w pozostałych komentarzach
             </div>
         );
     }

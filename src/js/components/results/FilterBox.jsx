@@ -8,7 +8,7 @@ const FilterBox = ({name}) => {
             <img
                 src={require('../../../resources/icons/CloseGrey.png')}
                 className="FilterBox__close"
-            />
+            />  //jako <a>, <button> grafika w css albo jako svg
         </div>
     );
 };

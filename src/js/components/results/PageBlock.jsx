@@ -30,7 +30,10 @@ export default class PageBlock extends React.Component {
         }
     }
 
-    render() {
+	/**
+     * nie wydaje mi się, żeby state był w tym komponencie potrzebny. Wszystko można ująć w css
+	 */
+	render() {
         var enteredClass = this.state.entered ? " EnteredBlock" : "";
         return (
             <div

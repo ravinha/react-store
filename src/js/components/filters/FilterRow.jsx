@@ -4,6 +4,9 @@ import Label from "../custom/Label.jsx";
 import Rating from "../custom/Rating.jsx";
 import DropDownIcon from "../custom/DropDownIcon.jsx";
 
+/**
+ * przydało by się lepsze formatowanie bo kod nie jest do końca czytelny
+ */
 const FilterRow = ({type, chosen, item, count, onStateChanged}) => {
     return (
         <div className="FilterRow">

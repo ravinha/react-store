@@ -1,6 +1,8 @@
 var ArrayUtils = require('./ArrayUtil');
 
 var PagesUtil = {
+
+    //bardzo nieczytelna funkcja. Może moglibyśmy napisać ją prościej?
     generatePagesNumbers: function (page, max) {
         if (max < 4)
             return ArrayUtils.getNextNumbers(max).map(current => {

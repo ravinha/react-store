@@ -24,10 +24,11 @@ export default class Checkbox extends React.Component {
     }
 
     render() {
+        //wykorzystaj classnames z npm'a
         var iconName = this.state.checked ? "checkbox_checked.png" : "checkbox_unchecked.png";
         return (
             <div className="CheckBox">
-                <img src={require(`../../../resources/icons/${iconName}`)} onClick={this.onStateChanged}/>
+                <img src={require(`../../../resources/icons/${iconName}`)} onClick={this.onStateChanged}/>  //svg albo icon font family
             </div>
         );
     }

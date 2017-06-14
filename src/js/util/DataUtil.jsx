@@ -3,6 +3,16 @@ import * as React from "react";
 import FilterOrientationBlock from "../components/filters/orientation/FilterOrientationBlock.jsx";
 import FilterColorBlock from "../components/filters/color/FilterColorBlock.jsx";
 
+/**
+ * już po samych importach podejrzewałem, że coś tutaj będzie nie tak :)
+ * w takich miejscach powinniśmy raczej omijać jakiekolwiek komponenty
+ *
+ * zwróćmy także uwagę, że stan początkowy aplikacji może przyjść z serwera. Wtedy na pewno nie będzie to czysty json,
+ * nie będzie definicji komponentu
+ *
+ * proponuje zwracać jsona + dla każdego pola dodatkowe pole type i to jego wykorzystujesz to wyświetlania w apliacji w
+ * jakimś bloku switch czy if. Tam też powinno nastąpić powiązanie z konkretną akcją "activateFilter".
+ */
 const DataUtil = {
 
     getFilters: function (model) {
@@ -109,6 +119,7 @@ const DataUtil = {
             this.fillCounters("Style", model.books[i].style, filters);
 
             if (model.books[i].isFavorite) {
+                //bez sensu ta pętla. Lepiej znaleźć taki filtr i zwiększać jego counter
                 for (var j = 0; j < filters.length; j++) {
                     if (filters[j].name === "Favorites")
                         filters[j].properties[0].count += 1;
@@ -122,6 +133,7 @@ const DataUtil = {
 
     fillCounters: function (filterName, bookProperty, filters) {
         for (var i = 0; i < filters.length; i++) {
+            //bez sensu. Lepiej użyć np. underscore _.find()  i tam wykonać operacje
             if (filters[i].name === filterName) {
                 for (var j = 0; j < filters[i].properties.length; j++) {
                     if (filters[i].properties[j].item === bookProperty) {
@@ -165,6 +177,7 @@ const DataUtil = {
         return model;
     },
 
+    //raczej do ArrayUtil'a
     getRandomArrayValue: function (array) {
         return array[Math.floor(Math.random() * (array.length))]
     }

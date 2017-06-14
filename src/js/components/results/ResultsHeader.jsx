@@ -3,6 +3,9 @@ import Label from "../custom/Label.jsx";
 import LayoutSelector from "../custom/LayoutSelector.jsx";
 import Select from "../custom/Select.jsx";
 
+/**
+ * należy zmienić nazwę. np. ResultsViewSettings. Tutaj nie ma żadnego header'a
+ */
 const ResultsHeader = ({count, selectItemsPerPage, selectColumns, columns}) => {
     return (
         <div className="ResultsHeader">

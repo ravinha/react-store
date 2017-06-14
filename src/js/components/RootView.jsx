@@ -20,7 +20,15 @@ export default class RootView extends React.Component {
     }
 
     filterBooks(initialModel, filters) {
-        var favoriteFilters = filters.find(f => f.name === "Favorites").properties.filter(filter => filter.chosen);
+        //lepiej nie używać skrótowych zmiennych (jak f)
+        //warto używać constów przy takich wartościach
+        //warto czasami rozbijać takie konstrukcje na kolejne linie
+
+		/**
+         * wydaje mi się, że mógłbyś zrobić tą metodę generyczną bez określania dostępnych filtrów. Niech iteruje po tej liście
+         * oczywiście z zachowaniem, że jeżeli filtr nie ma wartości albo wartość "All" to pokazuje wszystkie
+		 */
+		var favoriteFilters = filters.find(f => f.name === "Favorites").properties.filter(filter => filter.chosen);
         var industryFilters = filters.find(f => f.name === "Industry").properties.filter(filter => filter.chosen);
         var sizeFilters = filters.find(f => f.name === "Size").properties.filter(filter => filter.chosen);
         var styleFilters = filters.find(f => f.name === "Style").properties.filter(filter => filter.chosen);

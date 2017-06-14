@@ -8,7 +8,7 @@ export default class ResultsList extends React.Component {
         super(props);
         this.mark = this.mark.bind(this);
         this.state = {
-            marked: -1
+            marked: -1      //nie wiadomo do czego służy. To jest do hovera? Wtedy stylowanie jako css
         }
     }
 
@@ -19,16 +19,20 @@ export default class ResultsList extends React.Component {
     }
 
     render() {
-        var booksOffset = (this.props.pageNumber - 1) * this.props.itemsPerPage;
+		/**
+         * tak jak wspominałem tutaj powinniśmy dostać już spaginowane książki z ResultView (tam powinna nastąpić taka logika)
+		 */
+		var booksOffset = (this.props.pageNumber - 1) * this.props.itemsPerPage;
         var booksLeft = (this.props.books.length - booksOffset);
         var booksPerPage = this.props.isLastPage ? booksLeft : this.props.itemsPerPage;
+
         return (
             <div className="ResultsList">
-                {
+                { //tutaj od razu mógłbyś pisać ArrayUtils... - oszczędzasz wtedy miejsce i dalej jest czytelnie
                     ArrayUtils.getNextNumbers(booksPerPage)
                         .map((row, i) => {
                                 return <ResultsItem
-                                    key={i}
+                                    key={i} //staraj się klucze nie opierac o samo i
                                     mark={this.mark}
                                     index={booksOffset + row}
                                     columns={this.props.columns}
