@@ -23,6 +23,7 @@
 }
 
 .Marked {
+  //jako zagnieżdżona klasa w .ResultItem. Inaczej to będzie globalne
   border: $border $primary;
 
   & .Label__marked {

@@ -30,7 +30,13 @@ export default class LayoutSelector extends React.Component {
         }
     }
 
-    render() {
+	/**
+     * hovery przez css
+     *
+     * i to nie powinien być komponent a zwykły button wykorzystujący svg/icon font family.
+     * nie robimy tego budując markup html'a jak tutaj. Szkoda zasobów :)
+	 */
+	render() {
         var enteredClass = this.state.entered ? " EnteredLayout" : "";
         return (
             <div

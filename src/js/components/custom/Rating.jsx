@@ -1,6 +1,10 @@
 import React from "react";
 import * as ArrayUtil from "../../util/ArrayUtil";
 
+/**
+ * w propsach: maksymalna ocena
+ * zamiast img svg
+ */
 const Rating = ({rating}) => {
 
     let getStarImg = (row) => {

@@ -23,3 +23,5 @@ $block_checked_size: 43px;
   width: $block_checked_size;
   height: $block_checked_size;
 }
+
+//import w main.scss, 1. wtedy są dostępne dla wszystkich plików, 2. rozwiązuje problem cyklicznych zależnośći, 3. kompilacja jest szybsza

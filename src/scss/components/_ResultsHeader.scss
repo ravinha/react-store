@@ -15,7 +15,7 @@
       flex: 1;
     }
   }
-  & .Select {
+  & .Select { //nie musisz pisać spacji pomiędzy & a .
     margin-top: $custom_margin;
     margin-right: $custom_margin;
   }

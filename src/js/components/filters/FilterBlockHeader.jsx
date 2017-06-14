@@ -13,7 +13,7 @@ const FilterBlockHeader = ({title, subTitle = ""}) => {
                 <img
                     src={require('../../../resources/icons/close_mark.png')}
                     className="TitleHeader__close"
-                />
+                />  //<a> bądź <button> svg/icon font
             </div>
             <Label
                 bold={true}

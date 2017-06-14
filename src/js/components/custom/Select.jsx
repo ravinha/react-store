@@ -25,6 +25,8 @@ export default class Select extends React.Component {
             });
             this.props.onClick(item)
         }
+
+        //staraj się pisać tak metody aby wykonywały tylko raz setState(), nawet jeżeli rozróżnione jest to if'em
     }
 
     render() {
@@ -43,6 +45,10 @@ export default class Select extends React.Component {
                             .filter(bookCount => bookCount !== this.state.primary)
                             .map((bookCount, i) =>
                                 <li key={i}>
+                                    /**
+                                    * jak dla mnie tutaj mogłeś zawszeć ten komponent (nie potrzebuje aż takiej logiki
+                                    * jak to przedstawiłeś w SelectBox).
+                                    */
                                     <SelectBox
                                         isDropped={this.state.isDropped}
                                         position={i === this.state.items.length - 2 ? "last" : ""}

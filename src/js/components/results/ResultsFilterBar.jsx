@@ -13,7 +13,7 @@ const ResultsFilterBar = ({filtersChosen}) => {
             {
                 filtersChosen.map((filter, i) =>
                     <FilterBox
-                        key={i}
+                        key={i} //starajmy się pisac key bardziej złożone
                         name={filter.item}
                     />
                 )
