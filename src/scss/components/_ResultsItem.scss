@@ -1,4 +1,4 @@
-@import "../core/_layout";
+@import "../_settings";
 
 .ResultsItem {
   margin: auto;
@@ -20,6 +20,14 @@
     @extend .ResultsItem;
     width: 20%;
   }
+
+  .Marked {
+    border: $border $primary;
+
+    & .Label__marked {
+      color: $primary;
+    }
+  }
 }
 
 .Marked {
@@ -27,5 +35,13 @@
 
   & .Label__marked {
     color: $primary;
+  }
+}
+
+.RatingLayout {
+  display: flex;
+  align-items: center;
+  & .Rating {
+    flex: 1;
   }
 }

@@ -1,23 +1,27 @@
-@import "../core/_layout";
+@import "../_settings";
 
 .ResultsFilterBar {
   display: flex;
   align-items: center;
   border-left: $border $gray;
+
   & .Label__dark {
     margin: $custom_margin;
   }
+
   & .FilterBox {
     border: $border;
     border-radius: $border_radius;
     margin-right: 2px;
     display: flex;
     align-items: center;
+
     & .Label {
       flex: 1;
       padding-left: 5px;
       padding-right: 10px;
     }
+
     img {
       padding-right: 3px;
     }

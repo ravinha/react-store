@@ -28,7 +28,7 @@ export default class ResultsList extends React.Component {
                     ArrayUtils.getNextNumbers(booksPerPage)
                         .map((row, i) => {
                                 return <ResultsItem
-                                    key={i}
+                                    key={i+this.props.books[booksOffset + row]}
                                     mark={this.mark}
                                     index={booksOffset + row}
                                     columns={this.props.columns}

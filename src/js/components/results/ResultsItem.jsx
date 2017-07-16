@@ -1,6 +1,7 @@
 import React from "react";
 import Label from "../custom/Label.jsx";
-import RatingLayout from "./RatingLayout.jsx";
+import Rating from "../custom/Rating.jsx";
+import classNames from "classnames";
 
 export default class ResultsItem extends React.Component {
 
@@ -10,24 +11,30 @@ export default class ResultsItem extends React.Component {
     }
 
     click() {
-        if (this.props.marked) {
-            this.props.mark(-1)
-        } else {
-            this.props.mark(this.props.index)
-        }
+        this.props.mark(this.props.marked ? -1 : this.props.index)
     }
 
     render() {
-        var markedClassName = this.props.marked ? " Marked" : "";
+        var resultsItemClassNames = classNames(
+            [`ResultsItem__${this.props.columns}`],
+            {'Marked': this.props.marked}
+        );
+        var heartIconPath = this.props.book.isFavorite ? "RedHeart" : "GreyHeart";
         return (
-            <div className={`ResultsItem__${this.props.columns}${markedClassName}`} onClick={this.click}>
+            <div className={resultsItemClassNames} onClick={this.click}>
                 <img
                     className="BookImg"
                     src={require(`../../../resources/icons/${this.props.book.icon}`)}/>
-                <RatingLayout
-                    rating={this.props.book.rating}
-                    isFavorite={this.props.book.isFavorite}
-                />
+                <div className="RatingLayout">
+                    <Rating
+                        rating={this.props.book.rating}
+                        maxRating={5}
+                    />
+                    <img
+                        className="Heart"
+                        src={require(`../../../resources/icons/${heartIconPath}.png`)}
+                    />
+                </div>
                 <Label
                     bold={true}
                     color="dark"

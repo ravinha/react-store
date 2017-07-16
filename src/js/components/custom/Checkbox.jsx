@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames"
 
 export default class Checkbox extends React.Component {
 
@@ -24,7 +25,10 @@ export default class Checkbox extends React.Component {
     }
 
     render() {
-        var iconName = this.state.checked ? "checkbox_checked.png" : "checkbox_unchecked.png";
+        var iconName = classNames({
+            'checkbox_checked.png': this.state.checked,
+            'checkbox_unchecked.png': !this.state.checked
+        });
         return (
             <div className="CheckBox">
                 <img src={require(`../../../resources/icons/${iconName}`)} onClick={this.onStateChanged}/>

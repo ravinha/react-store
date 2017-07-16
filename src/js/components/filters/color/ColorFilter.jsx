@@ -4,7 +4,7 @@ export default class ColorFilter extends React.Component {
 
     constructor(props) {
         super(props);
-        this.check = this.check.bind(this);
+        this.checkFilter = this.checkFilter.bind(this);
         this.state = {
             checked: this.props.checked
         }
@@ -16,7 +16,7 @@ export default class ColorFilter extends React.Component {
         });
     }
 
-    check() {
+    checkFilter() {
         if (!this.props.last) {
             this.setState({
                 checked: !this.state.checked
@@ -37,7 +37,7 @@ export default class ColorFilter extends React.Component {
         };
         return (
             <div
-                onClick={this.check}
+                onClick={this.checkFilter}
                 style={colorBlockStyle}>
                 {  this.state.checked && !this.props.last &&
                 <img className="ChooseColorSign" src={require(`../../../../resources/icons/Check.png`)}/>  }

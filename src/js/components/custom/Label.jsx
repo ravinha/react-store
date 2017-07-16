@@ -1,15 +1,19 @@
 import React from "react";
+import classNames from "classnames";
 
 const Label = ({color, bold, className, content}) => {
-
-        var _color = color ? `Label__${color}` : "";
-        var _bold = bold ? " Label__bold" : "";
-        var _className = className ? " Label__" + className : "";
-        return (
-            <div className={"Label " + _color + _bold + _className}>
-                {content}
-            </div>
-        );
+    var labelClassNames = classNames(
+        'Label',
+        {
+            [`Label__${color}`]: color,
+            'Label__bold': bold,
+            [`Label__${className}`]: className,
+        });
+    return (
+        <div className={labelClassNames}>
+            {content}
+        </div>
+    );
 };
 
 export default Label;

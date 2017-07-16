@@ -1,5 +1,5 @@
 import React from "react";
-import ResultsHeader from "./ResultsHeader.jsx";
+import ResultsViewSettings from "./ResultsViewSettings.jsx";
 import ResultsFilterBar from "./ResultsFilterBar.jsx";
 import ResultsList from "./ResultsList.jsx";
 import ResultsFooter from "./ResultsFooter.jsx";
@@ -20,20 +20,20 @@ export default class ResultsView extends React.Component {
 
     selectPage(pageNumber) {
         this.setState({
-            pageNumber
+            pageNumber: pageNumber
         })
     }
 
     selectItemsPerPage(itemsPerPage) {
         this.setState({
             pageNumber: 1,
-            itemsPerPage
+            itemsPerPage: itemsPerPage
         })
     }
 
     selectColumns(columns) {
         this.setState({
-            columns
+            columns: columns
         })
     }
 
@@ -51,7 +51,7 @@ export default class ResultsView extends React.Component {
         var maxPages = Math.ceil(this.props.books.length / itemsPerPageNumber);
         return (
             <div className="ResultsView">
-                <ResultsHeader
+                <ResultsViewSettings
                     count={this.props.books.length}
                     columns={this.state.columns}
                     selectItemsPerPage={this.selectItemsPerPage}

@@ -3,7 +3,7 @@ import Label from "../custom/Label.jsx";
 import LayoutSelector from "../custom/LayoutSelector.jsx";
 import Select from "../custom/Select.jsx";
 
-const ResultsHeader = ({count, selectItemsPerPage, selectColumns, columns}) => {
+const ResultsViewSettings = ({count, selectItemsPerPage, selectColumns, columns}) => {
     return (
         <div className="ResultsHeader">
             <Label
@@ -40,4 +40,4 @@ const ResultsHeader = ({count, selectItemsPerPage, selectColumns, columns}) => {
         </div>
     );
 };
-export default ResultsHeader;
+export default ResultsViewSettings;

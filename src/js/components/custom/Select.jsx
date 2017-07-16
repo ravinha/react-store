@@ -14,17 +14,17 @@ export default class Select extends React.Component {
     }
 
     selectHandler(item) {
+        var newState;
         if (item === this.state.primary) {
-            this.setState({
-                isDropped: !this.state.isDropped
-            })
+            newState = {isDropped: !this.state.isDropped}
         } else {
-            this.setState({
+            newState = {
                 primary: item,
                 isDropped: false
-            });
+            };
             this.props.onClick(item)
         }
+        this.setState(newState)
     }
 
     render() {

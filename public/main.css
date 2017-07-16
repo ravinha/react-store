@@ -431,6 +431,40 @@ template {
   .FilterRow .Rating {
     flex: 1; }
 
+.DropDownIcon {
+  flex: 0 0 20px;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  top: 0;
+  left: 0; }
+  .DropDownIcon:after {
+    background-color: #56c47a;
+    width: 8px;
+    height: 2px;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    position: absolute;
+    top: 7px;
+    left: 4px;
+    content: ""; }
+  .DropDownIcon:before {
+    background-color: #56c47a;
+    width: 2px;
+    height: 8px;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    content: ""; }
+
 .CheckBox {
   flex: 0 0 20px; }
 
@@ -595,6 +629,10 @@ template {
     width: 25%; }
   .ResultsItem__4 {
     width: 20%; }
+  .ResultsItem .Marked, .ResultsItem__2 .Marked, .ResultsItem__3 .Marked, .ResultsItem__4 .Marked {
+    border: 1px solid #56c47a; }
+    .ResultsItem .Marked .Label__marked, .ResultsItem__2 .Marked .Label__marked, .ResultsItem__3 .Marked .Label__marked, .ResultsItem__4 .Marked .Label__marked {
+      color: #56c47a; }
 
 .Marked {
   border: 1px solid #56c47a; }
@@ -666,37 +704,3 @@ template {
   border: 1px solid #9b9b9b; }
   .LabeledContainer .Label__margin {
     margin: 2%; }
-
-.DropDownIcon {
-  flex: 0 0 20px;
-  position: relative;
-  width: 12px;
-  height: 12px;
-  background-color: white;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  top: 0;
-  left: 0; }
-  .DropDownIcon:after {
-    background-color: #56c47a;
-    width: 8px;
-    height: 2px;
-    border-radius: 1px;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    position: absolute;
-    top: 7px;
-    left: 4px;
-    content: ""; }
-  .DropDownIcon:before {
-    background-color: #56c47a;
-    width: 2px;
-    height: 8px;
-    border-radius: 1px;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    position: absolute;
-    top: 4px;
-    left: 7px;
-    content: ""; }

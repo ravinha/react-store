@@ -5,7 +5,8 @@
   "description": "",
   "main": "bundle.js",
   "dependencies": {
-    "font-awesome": "^4.4.0"
+    "font-awesome": "^4.4.0",
+    "classnames": "latest"
   },
   "devDependencies": {
     "babel-core": "~6.18.2",
@@ -29,7 +30,7 @@
     "buildCss": "./node_modules/node-sass/bin/node-sass ./src/scss/main.scss ./public/main.css",
     "buildJs": "./node_modules/webpack/bin/webpack.js -p",
     "watchCss": "./node_modules/node-sass/bin/node-sass --watch --recursive ./src/scss --output ./public",
-    "watchJs": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --progress --colors --content-base=./public "
+    "watchJs": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --progress --colors --content-base=./public --port 3000 "
   },
   "keywords": [],
   "author": "pwPBX",

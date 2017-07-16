@@ -1,47 +1,21 @@
 @import "./utils/_normalize";
-
 @import "./_settings";
-
-@import "./core/_layout";
-
 @import "./components/_RootView.scss";
-
 @import "./components/_FiltersView.scss";
-
 @import "./components/_ResultsView.scss";
-
 @import "./components/_FiltersBlockHeader.scss";
-
 @import "./components/_FilterRow.scss";
-
 @import "./components/_Checkbox.scss";
-
-@import "./components/_FilterOrientationRow.scss";
-
-@import "./components/_ColorRow.scss";
-
+@import "components/FilterOrientationBlock";
+@import "components/ColorBlock";
 @import "./components/_LayoutSelector.scss";
-
-@import "./components/_ResultsHeader.scss";
-
+@import "components/ResultsViewSettings";
 @import "./components/_ResultsFilterBar.scss";
-
 @import "./components/_ResultsFooter.scss";
-
 @import "./components/_Label.scss";
-
 @import "./components/_ResultsList.scss";
-
 @import "./components/_FilterBlock.scss";
-
 @import "./components/_ResultsItem.scss";
-
-@import "./components/_RatingLayout.scss";
-
 @import "./components/_Select.scss";
-
 @import "./components/_PageBlock.scss";
-
 @import "./components/_LabeledContainer.scss";
-
-@import "./components/_DropDownIcon.scss";

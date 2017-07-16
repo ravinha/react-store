@@ -1,6 +1,6 @@
 import React from "react";
 import FilterBlockHeader from "../FilterBlockHeader.jsx";
-import ColorRow from "./ColorRow.jsx";
+import ColorFilter from "./ColorFilter.jsx";
 import Label from "../../custom/Label.jsx";
 import LabeledContainer from "../../custom/LabeledContainer.jsx";
 
@@ -11,10 +11,19 @@ const FilterColorBlock = ({filters, activateFilter}) => {
                 title="Color"
                 subTitle="Choose color(s)"
             />
-            <ColorRow
-                filters={filters}
-                activateFilter={activateFilter}
-            />
+            <div className="ColorRow">
+                {
+                    filters.concat([10]).map((filter, i) =>
+                        <ColorFilter
+                            key={i}
+                            last={i === 9}
+                            color={filter.item}
+                            checked={filter.chosen}
+                            activateFilter={() => activateFilter(filter)}
+                        />
+                    )
+                }
+            </div>
             <Label
                 className="margin"
                 content="or"

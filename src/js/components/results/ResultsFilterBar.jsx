@@ -13,7 +13,7 @@ const ResultsFilterBar = ({filtersChosen}) => {
             {
                 filtersChosen.map((filter, i) =>
                     <FilterBox
-                        key={i}
+                        key={i+"_"+filter.hash}
                         name={filter.item}
                     />
                 )
